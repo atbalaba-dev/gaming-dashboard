@@ -393,9 +393,18 @@ function renderTimeline() {
 
   document.getElementById('month-label').textContent = monthStart.toLocaleDateString(undefined, { month: 'long', year: 'numeric' });
 
+  var GAME_PRIORITY = ["Genshin", "WWM", "DBD", "Pokopia", "MH Wilds", "Outlast", "Backlog"];
+
   var events = getMergedEvents().filter(function(ev) {
     return new Date(ev.end) >= monthStart && new Date(ev.start) <= monthEnd;
-  }).sort(function(a, b) { return new Date(a.start) - new Date(b.start); });
+  }).sort(function(a, b) {
+    var pa = GAME_PRIORITY.indexOf(a.game);
+    var pb = GAME_PRIORITY.indexOf(b.game);
+    if (pa === -1) pa = GAME_PRIORITY.length;
+    if (pb === -1) pb = GAME_PRIORITY.length;
+    if (pa !== pb) return pa - pb;
+    return new Date(a.start) - new Date(b.start);
+  });
 
   var grid = document.getElementById('timeline-grid');
 
