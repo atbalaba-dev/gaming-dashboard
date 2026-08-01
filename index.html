@@ -147,6 +147,11 @@
   }
   .timeline-days span { text-align: center; }
   .timeline-days span.today-marker { color: var(--text); font-weight: 700; }
+  .timeline-days span.weekend-marker { color: #d9a441; font-weight: 600; }
+  .timeline-weekend-band {
+    position: absolute; top: 0; bottom: 0; background: rgba(217,164,65,0.06);
+    pointer-events: none; z-index: 0;
+  }
   .timeline-row { position: relative; height: 34px; margin-bottom: 4px; }
   .timeline-row-label {
     font-size: 11px; color: var(--text-dim); margin-bottom: 3px;
@@ -416,7 +421,10 @@ function renderTimeline() {
   var dayHeaders = '<div class="timeline-days">';
   for (var d = 1; d <= daysInMonth; d++) {
     var dStr = year + '-' + String(month + 1).padStart(2, '0') + '-' + String(d).padStart(2, '0');
-    dayHeaders += '<span class="' + (dStr === today ? 'today-marker' : '') + '">' + d + '</span>';
+    var dow = new Date(year, month, d).getDay();
+    var isWeekend = (dow === 0 || dow === 6);
+    var cls = (dStr === today ? 'today-marker ' : '') + (isWeekend ? 'weekend-marker' : '');
+    dayHeaders += '<span class="' + cls + '">' + d + '</span>';
   }
   dayHeaders += '</div>';
 
@@ -449,6 +457,11 @@ function renderTimeline() {
   for (var gd = 1; gd <= daysInMonth; gd++) {
     var glinePct = ((gd - 1) / daysInMonth) * 100;
     gridlines += '<div class="gline" style="left:' + glinePct + '%"></div>';
+    var gdow = new Date(year, month, gd).getDay();
+    if (gdow === 0 || gdow === 6) {
+      var bandWidth = (1 / daysInMonth) * 100;
+      gridlines += '<div class="timeline-weekend-band" style="left:' + glinePct + '%;width:' + bandWidth + '%"></div>';
+    }
   }
   gridlines += '</div>';
 
