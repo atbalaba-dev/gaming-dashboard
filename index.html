@@ -393,7 +393,7 @@ function renderTimeline() {
 
   document.getElementById('month-label').textContent = monthStart.toLocaleDateString(undefined, { month: 'long', year: 'numeric' });
 
-  var GAME_PRIORITY = ["Genshin", "WWM", "DBD", "Pokopia", "MH Wilds", "Outlast", "Backlog"];
+  var GAME_PRIORITY = ["Genshin", "WWM", "DBD", "Outlast", "Pokopia", "MH Wilds", "Backlog"];
 
   var events = getMergedEvents().filter(function(ev) {
     return new Date(ev.end) >= monthStart && new Date(ev.start) <= monthEnd;
