@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaming Countdown</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #16151a;
+    --surface: #201f26;
+    --surface-hover: #26252d;
+    --line: #34333c;
+    --text: #ece9e2;
+    --text-dim: #8f8d97;
+    --text-faint: #5f5d66;
+
+    --genshin: #4f8fe8;
+    --wwm: #6fa85a;
+    --pokopia: #e8b84f;
+    --mhwilds: #e8813e;
+    --dbd: #d9534f;
+    --outlast: #9b6fc9;
+    --backlog: #8a8a85;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 32px 20px 80px;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 16px;
+  }
+  h1 { font-size: 20px; font-weight: 700; margin: 0; letter-spacing: -0.01em; }
+  .today { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--text-dim); }
+  .sync-status { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--text-faint); margin-top: 6px; }
+
+  .add-row { display: flex; gap: 8px; margin: 20px 0 24px; }
+  .add-row button {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .add-row button:hover { background: var(--surface-hover); }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+  .tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .local-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    color: var(--text-faint);
+    border: 1px solid var(--line);
+    padding: 2px 6px;
+    border-radius: 999px;
+    margin-left: 6px;
+  }
+  .title { font-size: 14px; font-weight: 500; line-height: 1.4; flex: 1; }
+  .days-left {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--text);
+    white-space: nowrap;
+    padding-top: 2px;
+  }
+  .bar-track {
+    height: 8px;
+    background: #100f13;
+    border-radius: 999px;
+    overflow: hidden;
+    position: relative;
+  }
+  .bar-notches {
+    position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(90deg, rgba(0,0,0,0.35) 0 1px, transparent 1px 8px);
+    pointer-events: none;
+  }
+  .bar-fill { height: 100%; border-radius: 999px; transition: width 0.3s ease; }
+  .desc { font-size: 12px; color: var(--text-dim); margin-top: 8px; line-height: 1.5; }
+  .del {
+    position: absolute; top: 10px; right: 10px;
+    background: none; border: none; color: var(--text-faint);
+    font-size: 12px; cursor: pointer; padding: 2px 6px;
+  }
+  .del:hover { color: var(--dbd); }
+  .ended .bar-fill { background: var(--text-faint) !important; }
+  .ended .days-left { color: var(--text-faint); }
+
+  .empty { text-align: center; color: var(--text-dim); font-size: 13px; padding: 40px 0; }
+
+  .modal-backdrop {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+    display: none; align-items: center; justify-content: center; padding: 20px; z-index: 10;
+  }
+  .modal-backdrop.open { display: flex; }
+  .modal {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 20px; width: 100%; max-width: 380px;
+  }
+  .modal h2 { font-size: 15px; margin: 0 0 14px; }
+  .field { margin-bottom: 10px; }
+  .field label { display: block; font-size: 11px; color: var(--text-dim); margin-bottom: 4px; font-family: 'IBM Plex Mono', monospace; }
+  .field input, .field select, .field textarea {
+    width: 100%; background: #16151a; border: 1px solid var(--line); color: var(--text);
+    padding: 8px 10px; border-radius: 6px; font-family: 'Space Grotesk', sans-serif; font-size: 13px;
+  }
+  .field textarea { resize: vertical; min-height: 50px; }
+  .modal-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 16px; }
+  .modal-actions button {
+    font-family: 'Space Grotesk', sans-serif; font-size: 13px; padding: 7px 14px;
+    border-radius: 8px; cursor: pointer; border: 1px solid var(--line); background: var(--surface-hover); color: var(--text);
+  }
+  .modal-actions button.primary { background: var(--text); color: var(--bg); border-color: var(--text); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header-wrap>
+    <header>
+      <h1>Gaming countdown</h1>
+      <span class="today" id="today"></span>
+    </header>
+    <div class="sync-status" id="sync-status">Loading latest data...</div>
+  </header-wrap>
+
+  <div class="add-row">
+    <button onclick="openModal()">+ Add event</button>
+    <button onclick="reloadFromServer()">↻ Refresh data</button>
+  </div>
+
+  <div id="list"></div>
+</div>
+
+<div class="modal-backdrop" id="backdrop">
+  <div class="modal">
+    <h2 id="modal-title">Add event</h2>
+    <div class="field">
+      <label>Game</label>
+      <select id="f-game">
+        <option value="Genshin">Genshin Impact</option>
+        <option value="WWM">Where Winds Meet</option>
+        <option value="Pokopia">Pokopia</option>
+        <option value="MH Wilds">MH Wilds</option>
+        <option value="DBD">Dead by Daylight</option>
+        <option value="Outlast">Outlast Trials</option>
+        <option value="Backlog">Backlog / Hype</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Event name</label>
+      <input id="f-title" placeholder="e.g. Phantom Thief Goose ends" />
+    </div>
+    <div class="field">
+      <label>Start date</label>
+      <input id="f-start" type="date" />
+    </div>
+    <div class="field">
+      <label>End date</label>
+      <input id="f-end" type="date" />
+    </div>
+    <div class="field">
+      <label>Note (optional)</label>
+      <textarea id="f-desc" placeholder="Brief description or rewards"></textarea>
+    </div>
+    <div class="modal-actions">
+      <button onclick="closeModal()">Cancel</button>
+      <button class="primary" onclick="saveEvent()">Save</button>
+    </div>
+  </div>
+</div>
+
+<script>
+var COLORS = {
+  "Genshin": "var(--genshin)",
+  "WWM": "var(--wwm)",
+  "Pokopia": "var(--pokopia)",
+  "MH Wilds": "var(--mhwilds)",
+  "DBD": "var(--dbd)",
+  "Outlast": "var(--outlast)",
+  "Backlog": "var(--backlog)"
+};
+
+var serverEvents = [];
+var localOverrides = {};
+var deletedIds = {};
+var editingId = null;
+
+function todayStr() {
+  return new Date().toISOString().split('T')[0];
+}
+
+function daysBetween(a, b) {
+  var msPerDay = 1000 * 60 * 60 * 24;
+  return Math.round((new Date(b) - new Date(a)) / msPerDay);
+}
+
+function loadLocalState() {
+  try {
+    localOverrides = JSON.parse(localStorage.getItem('gc_overrides') || '{}');
+  } catch (e) { localOverrides = {}; }
+  try {
+    deletedIds = JSON.parse(localStorage.getItem('gc_deleted') || '{}');
+  } catch (e) { deletedIds = {}; }
+}
+
+function saveLocalState() {
+  localStorage.setItem('gc_overrides', JSON.stringify(localOverrides));
+  localStorage.setItem('gc_deleted', JSON.stringify(deletedIds));
+}
+
+async function reloadFromServer() {
+  document.getElementById('sync-status').textContent = 'Refreshing...';
+  try {
+    var res = await fetch('data.json?t=' + Date.now());
+    serverEvents = await res.json();
+    document.getElementById('sync-status').textContent = 'Synced ' + new Date().toLocaleTimeString();
+  } catch (e) {
+    document.getElementById('sync-status').textContent = 'Could not reach data.json - showing local data only';
+  }
+  render();
+}
+
+function getMergedEvents() {
+  var byId = {};
+  serverEvents.forEach(function(ev) { byId[ev.id] = ev; });
+  Object.keys(localOverrides).forEach(function(id) { byId[id] = localOverrides[id]; });
+  Object.keys(deletedIds).forEach(function(id) { delete byId[id]; });
+  return Object.values(byId);
+}
+
+function render() {
+  document.getElementById('today').textContent = new Date().toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
+
+  var list = document.getElementById('list');
+  var today = todayStr();
+  var events = getMergedEvents();
+
+  var sorted = events.slice().sort(function(a, b) {
+    var aEnded = a.end < today ? 1 : 0;
+    var bEnded = b.end < today ? 1 : 0;
+    if (aEnded !== bEnded) return aEnded - bEnded;
+    return new Date(a.end) - new Date(b.end);
+  });
+
+  if (sorted.length === 0) {
+    list.innerHTML = '<div class="empty">No events tracked yet. Add one above.</div>';
+    return;
+  }
+
+  list.innerHTML = sorted.map(function(ev) {
+    var totalDays = Math.max(1, daysBetween(ev.start, ev.end));
+    var elapsed = daysBetween(ev.start, today);
+    var pct = Math.max(0, Math.min(100, Math.round((elapsed / totalDays) * 100)));
+    var daysLeft = daysBetween(today, ev.end);
+    var ended = daysLeft < 0;
+    var color = COLORS[ev.game] || 'var(--backlog)';
+    var isLocal = !!localOverrides[ev.id];
+
+    var daysLabel = ended ? 'ended' : (daysLeft === 0 ? 'ends today' : daysLeft + 'd left');
+
+    return '<div class="card ' + (ended ? 'ended' : '') + '" data-id="' + ev.id + '">'
+      + '<button class="del" onclick="deleteEvent(\'' + ev.id + '\')">remove</button>'
+      + '<div class="card-top">'
+      + '<span class="tag" style="background:' + color + '22;color:' + color + '">' + ev.game + '</span>'
+      + (isLocal ? '<span class="local-badge">edited locally</span>' : '')
+      + '<span class="days-left">' + daysLabel + '</span>'
+      + '</div>'
+      + '<div class="title" onclick="editEvent(\'' + ev.id + '\')" style="cursor:pointer">' + ev.title + '</div>'
+      + '<div class="bar-track" style="margin-top:8px"><div class="bar-notches"></div><div class="bar-fill" style="width:' + pct + '%;background:' + color + '"></div></div>'
+      + (ev.desc ? '<div class="desc">' + ev.desc + '</div>' : '')
+      + '</div>';
+  }).join('');
+}
+
+function openModal() {
+  editingId = null;
+  document.getElementById('modal-title').textContent = 'Add event';
+  document.getElementById('f-game').value = 'Genshin';
+  document.getElementById('f-title').value = '';
+  document.getElementById('f-start').value = todayStr();
+  document.getElementById('f-end').value = todayStr();
+  document.getElementById('f-desc').value = '';
+  document.getElementById('backdrop').classList.add('open');
+}
+
+function editEvent(id) {
+  var ev = getMergedEvents().find(function(e) { return e.id === id; });
+  if (!ev) return;
+  editingId = id;
+  document.getElementById('modal-title').textContent = 'Edit event';
+  document.getElementById('f-game').value = ev.game;
+  document.getElementById('f-title').value = ev.title;
+  document.getElementById('f-start').value = ev.start;
+  document.getElementById('f-end').value = ev.end;
+  document.getElementById('f-desc').value = ev.desc || '';
+  document.getElementById('backdrop').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('backdrop').classList.remove('open');
+}
+
+function saveEvent() {
+  var game = document.getElementById('f-game').value;
+  var title = document.getElementById('f-title').value.trim();
+  var start = document.getElementById('f-start').value;
+  var end = document.getElementById('f-end').value;
+  var desc = document.getElementById('f-desc').value.trim();
+
+  if (!title || !start || !end) return;
+
+  var id = editingId || ('local' + Date.now());
+  localOverrides[id] = { id: id, game: game, title: title, start: start, end: end, desc: desc };
+  delete deletedIds[id];
+
+  saveLocalState();
+  render();
+  closeModal();
+}
+
+function deleteEvent(id) {
+  deletedIds[id] = true;
+  delete localOverrides[id];
+  saveLocalState();
+  render();
+}
+
+loadLocalState();
+reloadFromServer();
+</script>
+</body>
+</html>

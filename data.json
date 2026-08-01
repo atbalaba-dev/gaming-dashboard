@@ -1,0 +1,16 @@
+[
+  { "id": "g1", "game": "Genshin", "title": "Sunny Summer Fontinalia ends", "start": "2026-07-01", "end": "2026-08-12", "desc": "Main story event in Fontaine. Free 4-star Charlotte + skin, Primogems." },
+  { "id": "g2", "game": "Genshin", "title": "Final Long-Range Sightlines ends", "start": "2026-07-17", "end": "2026-07-28", "desc": "Shooting drill event. Primogems, Mora, ascension materials." },
+  { "id": "g3", "game": "Genshin", "title": "Stygian Onslaught - Disturbance Outbreak (estimated, verify)", "start": "2026-08-19", "end": "2026-08-29", "desc": "Only the 10-day outbreak window matters (Dire Prestige artifact rewards). Estimated from historical pattern (1 week after version release) - confirm exact date once 6.8 patch notes are out." },
+  { "id": "g4", "game": "Genshin", "title": "Spiral Abyss / Imaginarium Theater - biweekly reset", "start": "2026-08-01", "end": "2026-08-16", "desc": "Recurring biweekly reset (1st/16th). Your usual pace: start ~3-4 days after reset, once you've checked team guides." },
+  { "id": "w1", "game": "WWM", "title": "Phantom Thief Goose ends", "start": "2026-07-03", "end": "2026-08-01", "desc": "Steal treasures as Goose Bobo, trade for prizes." },
+  { "id": "w2", "game": "WWM", "title": "2nd Jianghu Martial Games ends", "start": "2026-07-22", "end": "2026-08-07", "desc": "Flagship PvE/PvP/raid event from 1.8 update." },
+  { "id": "w3", "game": "WWM", "title": "Season 3: Seek Within ends", "start": "2026-07-01", "end": "2026-07-24", "desc": "Season content + PvP season under one umbrella." },
+  { "id": "p1", "game": "Pokopia", "title": "Zorua's Hide-and-Sneak Contest ends", "start": "2026-07-19", "end": "2026-07-28", "desc": "Hide-and-seek vs Zorua, leaderboard + trophy." },
+  { "id": "m1", "game": "MH Wilds", "title": "Festival of Accord: Flamefete ends", "start": "2026-07-08", "end": "2026-08-19", "desc": "Summer festival. Already have Diver/Afi - check for anything new." },
+  { "id": "d1", "game": "DBD", "title": "Summer Screams ends", "start": "2026-07-28", "end": "2026-08-19", "desc": "Rotating modes: Lights Out, 2v8, Chaos Shuffle." },
+  { "id": "d2", "game": "DBD", "title": "Into the Rainbow ends (check dates)", "start": "2026-07-23", "end": "2026-07-29", "desc": "Free Pride rewards - unconfirmed exact dates." },
+  { "id": "d3", "game": "DBD", "title": "Sunflesh Rift closes", "start": "2026-07-21", "end": "2026-10-06", "desc": "Reminder only - tiers lost after close." },
+  { "id": "o1", "game": "Outlast", "title": "Blood Drive ends", "start": "2026-07-14", "end": "2026-08-26", "desc": "Donate blood for Event Tokens before they're forfeited." },
+  { "id": "b1", "game": "Backlog", "title": "Hype: Palworld / Story: RE Requiem", "start": "2026-07-22", "end": "2026-07-23", "desc": "Edit this one directly as backlog progress changes." }
+]
