@@ -422,8 +422,10 @@ function renderTimeline() {
 
   var rows = events.map(function(ev) {
     var color = COLORS[ev.game] || 'var(--backlog)';
+    var realEnd = new Date(ev.end);
+    realEnd.setDate(realEnd.getDate() - 1);
     var evStart = new Date(ev.start) < monthStart ? monthStart : new Date(ev.start);
-    var evEndRaw = new Date(ev.end) > monthEnd ? monthEnd : new Date(ev.end);
+    var evEndRaw = realEnd > monthEnd ? monthEnd : realEnd;
     var startDay = evStart.getDate();
     var endDay = evEndRaw.getDate();
     var span = Math.max(1, endDay - startDay + 1);
