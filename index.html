@@ -32,7 +32,7 @@
     font-family: 'Space Grotesk', sans-serif;
     padding: 32px 20px 80px;
   }
-  .wrap { max-width: 640px; margin: 0 auto; }
+  .wrap { max-width: 760px; margin: 0 auto; }
   header {
     display: flex;
     justify-content: space-between;
@@ -45,7 +45,16 @@
   .today { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--text-dim); }
   .sync-status { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--text-faint); margin-top: 6px; }
 
-  .add-row { display: flex; gap: 8px; margin: 20px 0 24px; }
+  .tabs { display: flex; gap: 4px; margin: 20px 0 16px; border-bottom: 1px solid var(--line); }
+  .tab {
+    background: none; border: none; color: var(--text-dim);
+    font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 500;
+    padding: 8px 14px; cursor: pointer; border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+  }
+  .tab.active { color: var(--text); border-bottom-color: var(--text); }
+
+  .add-row { display: flex; gap: 8px; margin: 16px 0 20px; }
   .add-row button {
     background: var(--surface);
     border: 1px solid var(--line);
@@ -58,15 +67,16 @@
   }
   .add-row button:hover { background: var(--surface-hover); }
 
+  /* LIST VIEW */
   .card {
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: 12px;
     padding: 14px 16px;
     margin-bottom: 10px;
-    position: relative;
   }
-  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+  .card-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .card-top-left { display: flex; align-items: center; gap: 6px; }
   .tag {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
@@ -83,22 +93,21 @@
     border: 1px solid var(--line);
     padding: 2px 6px;
     border-radius: 999px;
-    margin-left: 6px;
   }
-  .title { font-size: 14px; font-weight: 500; line-height: 1.4; flex: 1; }
   .days-left {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 12px;
     color: var(--text);
     white-space: nowrap;
-    padding-top: 2px;
   }
+  .title { font-size: 14px; font-weight: 500; line-height: 1.4; }
   .bar-track {
     height: 8px;
     background: #100f13;
     border-radius: 999px;
     overflow: hidden;
     position: relative;
+    margin-top: 8px;
   }
   .bar-notches {
     position: absolute; inset: 0;
@@ -107,16 +116,54 @@
   }
   .bar-fill { height: 100%; border-radius: 999px; transition: width 0.3s ease; }
   .desc { font-size: 12px; color: var(--text-dim); margin-top: 8px; line-height: 1.5; }
-  .del {
-    position: absolute; top: 10px; right: 10px;
+  .card-footer { display: flex; justify-content: flex-end; margin-top: 10px; }
+  .card-footer button {
     background: none; border: none; color: var(--text-faint);
-    font-size: 12px; cursor: pointer; padding: 2px 6px;
+    font-size: 11px; cursor: pointer; padding: 2px 4px;
+    font-family: 'IBM Plex Mono', monospace;
   }
-  .del:hover { color: var(--dbd); }
+  .card-footer button:hover { color: var(--dbd); }
   .ended .bar-fill { background: var(--text-faint) !important; }
   .ended .days-left { color: var(--text-faint); }
 
   .empty { text-align: center; color: var(--text-dim); font-size: 13px; padding: 40px 0; }
+
+  /* TIMELINE VIEW */
+  .timeline-nav {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  .timeline-nav button {
+    background: var(--surface); border: 1px solid var(--line); color: var(--text);
+    font-size: 13px; padding: 6px 12px; border-radius: 8px; cursor: pointer;
+  }
+  .timeline-nav .month-label { font-size: 14px; font-weight: 500; }
+  .timeline-scroll { overflow-x: auto; }
+  .timeline-grid { min-width: 600px; }
+  .timeline-days {
+    display: grid; grid-auto-flow: column; grid-auto-columns: 1fr;
+    font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: var(--text-faint);
+    padding-bottom: 6px; border-bottom: 1px solid var(--line); margin-bottom: 6px;
+  }
+  .timeline-days span { text-align: center; }
+  .timeline-days span.today-marker { color: var(--text); font-weight: 700; }
+  .timeline-row { position: relative; height: 30px; margin-bottom: 4px; }
+  .timeline-row-label {
+    font-size: 11px; color: var(--text-dim); margin-bottom: 3px;
+  }
+  .timeline-bar {
+    position: absolute; top: 0; height: 22px; border-radius: 6px;
+    display: flex; align-items: center; padding: 0 8px; font-size: 11px;
+    white-space: nowrap; overflow: hidden; cursor: pointer;
+  }
+  .timeline-today-line {
+    position: absolute; top: 0; bottom: 0; width: 1px; background: var(--text);
+    opacity: 0.5; z-index: 5;
+  }
+  .timeline-empty { text-align: center; color: var(--text-dim); font-size: 13px; padding: 30px 0; }
+
+  .view { display: none; }
+  .view.active { display: block; }
 
   .modal-backdrop {
     position: fixed; inset: 0; background: rgba(0,0,0,0.6);
@@ -145,20 +192,36 @@
 </head>
 <body>
 <div class="wrap">
-  <header-wrap>
-    <header>
-      <h1>Gaming countdown</h1>
-      <span class="today" id="today"></span>
-    </header>
-    <div class="sync-status" id="sync-status">Loading latest data...</div>
-  </header-wrap>
+  <header>
+    <h1>Gaming countdown</h1>
+    <span class="today" id="today"></span>
+  </header>
+  <div class="sync-status" id="sync-status">Loading latest data...</div>
+
+  <div class="tabs">
+    <button class="tab active" id="tab-list" onclick="switchView('list')">List</button>
+    <button class="tab" id="tab-timeline" onclick="switchView('timeline')">Timeline</button>
+  </div>
 
   <div class="add-row">
     <button onclick="openModal()">+ Add event</button>
-    <button onclick="reloadFromServer()">↻ Refresh data</button>
+    <button onclick="reloadFromServer()">Refresh data</button>
   </div>
 
-  <div id="list"></div>
+  <div id="view-list" class="view active">
+    <div id="list"></div>
+  </div>
+
+  <div id="view-timeline" class="view">
+    <div class="timeline-nav">
+      <button onclick="shiftMonth(-1)">Prev</button>
+      <span class="month-label" id="month-label"></span>
+      <button onclick="shiftMonth(1)">Next</button>
+    </div>
+    <div class="timeline-scroll">
+      <div class="timeline-grid" id="timeline-grid"></div>
+    </div>
+  </div>
 </div>
 
 <div class="modal-backdrop" id="backdrop">
@@ -214,6 +277,8 @@ var serverEvents = [];
 var localOverrides = {};
 var deletedIds = {};
 var editingId = null;
+var currentView = 'list';
+var timelineMonth = new Date();
 
 function todayStr() {
   return new Date().toISOString().split('T')[0];
@@ -225,12 +290,8 @@ function daysBetween(a, b) {
 }
 
 function loadLocalState() {
-  try {
-    localOverrides = JSON.parse(localStorage.getItem('gc_overrides') || '{}');
-  } catch (e) { localOverrides = {}; }
-  try {
-    deletedIds = JSON.parse(localStorage.getItem('gc_deleted') || '{}');
-  } catch (e) { deletedIds = {}; }
+  try { localOverrides = JSON.parse(localStorage.getItem('gc_overrides') || '{}'); } catch (e) { localOverrides = {}; }
+  try { deletedIds = JSON.parse(localStorage.getItem('gc_deleted') || '{}'); } catch (e) { deletedIds = {}; }
 }
 
 function saveLocalState() {
@@ -247,7 +308,7 @@ async function reloadFromServer() {
   } catch (e) {
     document.getElementById('sync-status').textContent = 'Could not reach data.json - showing local data only';
   }
-  render();
+  renderAll();
 }
 
 function getMergedEvents() {
@@ -258,9 +319,21 @@ function getMergedEvents() {
   return Object.values(byId);
 }
 
-function render() {
-  document.getElementById('today').textContent = new Date().toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
+function switchView(view) {
+  currentView = view;
+  document.getElementById('tab-list').classList.toggle('active', view === 'list');
+  document.getElementById('tab-timeline').classList.toggle('active', view === 'timeline');
+  document.getElementById('view-list').classList.toggle('active', view === 'list');
+  document.getElementById('view-timeline').classList.toggle('active', view === 'timeline');
+  renderAll();
+}
 
+function renderAll() {
+  document.getElementById('today').textContent = new Date().toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
+  if (currentView === 'list') renderList(); else renderTimeline();
+}
+
+function renderList() {
   var list = document.getElementById('list');
   var today = todayStr();
   var events = getMergedEvents();
@@ -285,21 +358,79 @@ function render() {
     var ended = daysLeft < 0;
     var color = COLORS[ev.game] || 'var(--backlog)';
     var isLocal = !!localOverrides[ev.id];
-
     var daysLabel = ended ? 'ended' : (daysLeft === 0 ? 'ends today' : daysLeft + 'd left');
 
-    return '<div class="card ' + (ended ? 'ended' : '') + '" data-id="' + ev.id + '">'
-      + '<button class="del" onclick="deleteEvent(\'' + ev.id + '\')">remove</button>'
+    return '<div class="card ' + (ended ? 'ended' : '') + '">'
       + '<div class="card-top">'
-      + '<span class="tag" style="background:' + color + '22;color:' + color + '">' + ev.game + '</span>'
-      + (isLocal ? '<span class="local-badge">edited locally</span>' : '')
+      + '<div class="card-top-left"><span class="tag" style="background:' + color + '22;color:' + color + '">' + ev.game + '</span>'
+      + (isLocal ? '<span class="local-badge">edited locally</span>' : '') + '</div>'
       + '<span class="days-left">' + daysLabel + '</span>'
       + '</div>'
       + '<div class="title" onclick="editEvent(\'' + ev.id + '\')" style="cursor:pointer">' + ev.title + '</div>'
-      + '<div class="bar-track" style="margin-top:8px"><div class="bar-notches"></div><div class="bar-fill" style="width:' + pct + '%;background:' + color + '"></div></div>'
+      + '<div class="bar-track"><div class="bar-notches"></div><div class="bar-fill" style="width:' + pct + '%;background:' + color + '"></div></div>'
       + (ev.desc ? '<div class="desc">' + ev.desc + '</div>' : '')
+      + '<div class="card-footer"><button onclick="deleteEvent(\'' + ev.id + '\')">remove</button></div>'
       + '</div>';
   }).join('');
+}
+
+function renderTimeline() {
+  var year = timelineMonth.getFullYear();
+  var month = timelineMonth.getMonth();
+  var monthStart = new Date(year, month, 1);
+  var monthEnd = new Date(year, month + 1, 0);
+  var daysInMonth = monthEnd.getDate();
+  var today = todayStr();
+
+  document.getElementById('month-label').textContent = monthStart.toLocaleDateString(undefined, { month: 'long', year: 'numeric' });
+
+  var events = getMergedEvents().filter(function(ev) {
+    return new Date(ev.end) >= monthStart && new Date(ev.start) <= monthEnd;
+  }).sort(function(a, b) { return new Date(a.start) - new Date(b.start); });
+
+  var grid = document.getElementById('timeline-grid');
+
+  if (events.length === 0) {
+    grid.innerHTML = '<div class="timeline-empty">No events in this month.</div>';
+    return;
+  }
+
+  var dayHeaders = '<div class="timeline-days">';
+  for (var d = 1; d <= daysInMonth; d++) {
+    var dStr = year + '-' + String(month + 1).padStart(2, '0') + '-' + String(d).padStart(2, '0');
+    dayHeaders += '<span class="' + (dStr === today ? 'today-marker' : '') + '">' + d + '</span>';
+  }
+  dayHeaders += '</div>';
+
+  var rows = events.map(function(ev) {
+    var color = COLORS[ev.game] || 'var(--backlog)';
+    var evStart = new Date(ev.start) < monthStart ? monthStart : new Date(ev.start);
+    var evEndRaw = new Date(ev.end) > monthEnd ? monthEnd : new Date(ev.end);
+    var startDay = evStart.getDate();
+    var endDay = evEndRaw.getDate();
+    var span = Math.max(1, endDay - startDay + 1);
+    var leftPct = ((startDay - 1) / daysInMonth) * 100;
+    var widthPct = (span / daysInMonth) * 100;
+
+    return '<div class="timeline-row-label">' + ev.game + '</div>'
+      + '<div class="timeline-row">'
+      + '<div class="timeline-bar" style="left:' + leftPct + '%;width:' + widthPct + '%;background:' + color + '22;color:' + color + ';border:1px solid ' + color + '55" onclick="editEvent(\'' + ev.id + '\')" title="' + ev.title + '">' + ev.title + '</div>'
+      + '</div>';
+  }).join('');
+
+  var todayLine = '';
+  if (year === new Date().getFullYear() && month === new Date().getMonth()) {
+    var todayDay = new Date().getDate();
+    var todayLeft = ((todayDay - 0.5) / daysInMonth) * 100;
+    todayLine = '<div class="timeline-today-line" style="left:' + todayLeft + '%"></div>';
+  }
+
+  grid.innerHTML = '<div style="position:relative">' + dayHeaders + rows + todayLine + '</div>';
+}
+
+function shiftMonth(delta) {
+  timelineMonth = new Date(timelineMonth.getFullYear(), timelineMonth.getMonth() + delta, 1);
+  renderTimeline();
 }
 
 function openModal() {
@@ -344,7 +475,7 @@ function saveEvent() {
   delete deletedIds[id];
 
   saveLocalState();
-  render();
+  renderAll();
   closeModal();
 }
 
@@ -352,7 +483,7 @@ function deleteEvent(id) {
   deletedIds[id] = true;
   delete localOverrides[id];
   saveLocalState();
-  render();
+  renderAll();
 }
 
 loadLocalState();
