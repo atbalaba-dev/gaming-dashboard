@@ -102,5 +102,13 @@
     "start": "2026-08-01",
     "end": "2026-08-31",
     "desc": "Confirmed in-game: resets monthly, NOT biweekly like Abyss (was wrongly assumed to share Abyss's schedule). Your usual pace: start ~3-4 days after reset."
+  },
+  {
+    "id": "g5",
+    "game": "Genshin",
+    "title": "Artifact Transmuter - Sanctifying Elixir cycle ends",
+    "start": "2026-07-01",
+    "end": "2026-08-11",
+    "desc": "Capped at 1 extractable Sanctifying Elixir per cycle (resets with each version, ~42 days). Confirmed in-game: 1 still extractable this cycle as of Aug 1. Use it before the cycle resets with 7.0."
   }
 ]
