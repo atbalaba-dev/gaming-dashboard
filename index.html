@@ -147,18 +147,27 @@
   }
   .timeline-days span { text-align: center; }
   .timeline-days span.today-marker { color: var(--text); font-weight: 700; }
-  .timeline-row { position: relative; height: 30px; margin-bottom: 4px; }
+  .timeline-row { position: relative; height: 34px; margin-bottom: 4px; }
   .timeline-row-label {
     font-size: 11px; color: var(--text-dim); margin-bottom: 3px;
   }
   .timeline-bar {
-    position: absolute; top: 0; height: 22px; border-radius: 6px;
-    display: flex; align-items: center; padding: 0 8px; font-size: 11px;
+    position: absolute; top: 0; height: 26px; border-radius: 6px;
+    display: flex; align-items: center; padding: 0 10px; font-size: 11px; font-weight: 500;
     white-space: nowrap; overflow: hidden; cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
   }
   .timeline-today-line {
-    position: absolute; top: 0; bottom: 0; width: 1px; background: var(--text);
-    opacity: 0.5; z-index: 5;
+    position: absolute; top: 0; bottom: 0; width: 2px; background: var(--text);
+    opacity: 0.6; z-index: 5;
+  }
+  .timeline-gridlines {
+    position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+    pointer-events: none; z-index: 0;
+  }
+  .timeline-gridlines .gline {
+    position: absolute; top: 0; bottom: 0; width: 1px; background: var(--line);
+    opacity: 0.5;
   }
   .timeline-empty { text-align: center; color: var(--text-dim); font-size: 13px; padding: 30px 0; }
 
@@ -414,7 +423,7 @@ function renderTimeline() {
 
     return '<div class="timeline-row-label">' + ev.game + '</div>'
       + '<div class="timeline-row">'
-      + '<div class="timeline-bar" style="left:' + leftPct + '%;width:' + widthPct + '%;background:' + color + '22;color:' + color + ';border:1px solid ' + color + '55" onclick="editEvent(\'' + ev.id + '\')" title="' + ev.title + '">' + ev.title + '</div>'
+      + '<div class="timeline-bar" style="left:' + leftPct + '%;width:' + widthPct + '%;background:' + color + ';color:#0e0d11" onclick="editEvent(\'' + ev.id + '\')" title="' + ev.title + '">' + ev.title + '</div>'
       + '</div>';
   }).join('');
 
@@ -425,7 +434,14 @@ function renderTimeline() {
     todayLine = '<div class="timeline-today-line" style="left:' + todayLeft + '%"></div>';
   }
 
-  grid.innerHTML = '<div style="position:relative">' + dayHeaders + rows + todayLine + '</div>';
+  var gridlines = '<div class="timeline-gridlines">';
+  for (var gd = 1; gd <= daysInMonth; gd++) {
+    var glinePct = ((gd - 1) / daysInMonth) * 100;
+    gridlines += '<div class="gline" style="left:' + glinePct + '%"></div>';
+  }
+  gridlines += '</div>';
+
+  grid.innerHTML = '<div style="position:relative">' + dayHeaders + gridlines + rows + todayLine + '</div>';
 }
 
 function shiftMonth(delta) {
