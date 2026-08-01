@@ -363,7 +363,7 @@ function renderList() {
     var totalDays = Math.max(1, daysBetween(ev.start, ev.end));
     var elapsed = daysBetween(ev.start, today);
     var pct = Math.max(0, Math.min(100, Math.round((elapsed / totalDays) * 100)));
-    var daysLeft = daysBetween(today, ev.end);
+    var daysLeft = daysBetween(today, ev.end) - 1;
     var ended = daysLeft < 0;
     var color = COLORS[ev.game] || 'var(--backlog)';
     var isLocal = !!localOverrides[ev.id];
