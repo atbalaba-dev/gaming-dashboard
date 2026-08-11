@@ -1,29 +1,5 @@
 [
   {
-    "id": "g1",
-    "game": "Genshin",
-    "title": "Sunny Summer Fontinalia ends",
-    "start": "2026-07-01",
-    "end": "2026-08-12",
-    "desc": "Main story event in Fontaine. Free 4-star Charlotte + skin, Primogems."
-  },
-  {
-    "id": "g3",
-    "game": "Genshin",
-    "title": "Stygian Onslaught - Disturbance Outbreak (estimated, verify)",
-    "start": "2026-08-19",
-    "end": "2026-08-29",
-    "desc": "Only the 10-day outbreak window matters (Dire Prestige artifact rewards). Estimated from historical pattern - next version is 7.0 (not 6.8), launches Aug 12. Confirm exact date once 7.0 patch notes are out."
-  },
-  {
-    "id": "w2",
-    "game": "WWM",
-    "title": "2nd Jianghu Martial Games ends",
-    "start": "2026-07-22",
-    "end": "2026-08-07",
-    "desc": "Flagship PvE/PvP/raid event from 1.8 update."
-  },
-  {
     "id": "w4",
     "game": "WWM",
     "title": "Cutie Clash ends",
@@ -90,10 +66,10 @@
   {
     "id": "g4a-202608a",
     "game": "Genshin",
-    "title": "Spiral Abyss - biweekly reset",
-    "start": "2026-08-01",
+    "title": "Spiral Abyss - monthly reset",
+    "start": "2026-07-16",
     "end": "2026-08-16",
-    "desc": "Confirmed in-game: resets biweekly (1st/16th). Your usual pace: start ~3-4 days after reset."
+    "desc": "CORRECTED: resets monthly on the 16th (not biweekly as originally assumed - that was from checking Abyss+Theater together, which are each monthly but offset by 2 weeks from each other). Your usual pace: start ~3-4 days after reset."
   },
   {
     "id": "g4b-202608",
@@ -104,11 +80,19 @@
     "desc": "Confirmed in-game: resets monthly, NOT biweekly like Abyss (was wrongly assumed to share Abyss's schedule). Your usual pace: start ~3-4 days after reset."
   },
   {
-    "id": "g5-202607",
+    "id": "w6-202608",
+    "game": "WWM",
+    "title": "Summer Spree ends",
+    "start": "2026-08-06",
+    "end": "2026-08-21",
+    "desc": "Also called 'Happy Summer.' Includes Beat the Heat, Summer Cookout, and Summer Skirmishes mini-events. Log in through Aug 18 for a Lingering Melody reward."
+  },
+  {
+    "id": "g3-202608-est",
     "game": "Genshin",
-    "title": "Artifact Transmuter - Sanctifying Elixir cycle ends",
-    "start": "2026-07-01",
-    "end": "2026-08-11",
-    "desc": "Capped at 1 extractable Sanctifying Elixir per cycle (resets with each version, ~42 days). Confirmed in-game: 1 still extractable this cycle as of Aug 1. Use it before the cycle resets with 7.0."
+    "title": "Stygian Onslaught - Disturbance Outbreak (estimated, verify)",
+    "start": "2026-08-18",
+    "end": "2026-08-28",
+    "desc": "Only the 10-day outbreak window matters (Dire Prestige artifact rewards). Estimated from historical pattern (1 week after version release) - 7.0 launches Aug 11 (today), so outbreak likely starts ~Aug 18. Confirm once 7.0 patch notes are fully out."
   }
 ]
