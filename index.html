@@ -146,6 +146,45 @@
   .archive-restore { background: none; border: none; color: var(--text-faint); font-size: 11px; cursor: pointer; font-family: 'IBM Plex Mono', monospace; }
   .archive-restore:hover { color: var(--text); }
 
+  /* QUESTS VIEW */
+  .quest-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+  }
+  .quest-card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+  .quest-slot { display: flex; align-items: center; gap: 8px; padding: 6px 0; }
+  .quest-checkbox {
+    width: 18px; height: 18px; border-radius: 5px; border: 1.5px solid var(--line);
+    background: transparent; cursor: pointer; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .quest-checkbox:hover { border-color: var(--text-dim); }
+  .quest-text { font-size: 13px; color: var(--text); flex: 1; }
+  .quest-empty-slot { display: flex; align-items: center; gap: 8px; padding: 6px 0; }
+  .quest-empty-slot input {
+    flex: 1; background: #16151a; border: 1px solid var(--line); color: var(--text);
+    padding: 6px 10px; border-radius: 6px; font-family: 'Space Grotesk', sans-serif; font-size: 13px;
+  }
+  .quest-empty-slot button {
+    background: var(--surface-hover); border: 1px solid var(--line); color: var(--text-dim);
+    font-size: 12px; padding: 6px 10px; border-radius: 6px; cursor: pointer; flex-shrink: 0;
+  }
+  .quest-log-toggle {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--text-faint);
+    cursor: pointer; margin-top: 8px; display: inline-block;
+  }
+  .quest-log-toggle:hover { color: var(--text-dim); }
+  .quest-log { display: none; margin-top: 8px; border-top: 1px solid var(--line); padding-top: 8px; }
+  .quest-log.open { display: block; }
+  .quest-log-item {
+    font-size: 12px; color: var(--text-faint); padding: 3px 0;
+    display: flex; justify-content: space-between; gap: 10px;
+  }
+  .quest-log-item span:first-child { text-decoration: line-through; }
+
   /* TIMELINE VIEW */
   .timeline-nav {
     display: flex; align-items: center; justify-content: space-between;
@@ -234,6 +273,7 @@
     <button class="tab active" id="tab-list" onclick="switchView('list')">List</button>
     <button class="tab" id="tab-timeline" onclick="switchView('timeline')">Timeline</button>
     <button class="tab" id="tab-archive" onclick="switchView('archive')">Archive</button>
+    <button class="tab" id="tab-quests" onclick="switchView('quests')">Quests</button>
   </div>
 
   <div class="add-row">
@@ -258,6 +298,10 @@
 
   <div id="view-archive" class="view">
     <div id="archive-list"></div>
+  </div>
+
+  <div id="view-quests" class="view">
+    <div id="quests-list"></div>
   </div>
 </div>
 
@@ -316,6 +360,11 @@ var archivedEvents = {};
 var editingId = null;
 var currentView = 'list';
 var timelineMonth = new Date();
+var quests = {};
+var questLog = [];
+var openQuestLogs = {};
+
+var QUEST_GAMES = ["Genshin", "WWM", "DBD", "Outlast", "Pokopia", "MH Wilds"];
 
 function todayStr() {
   return new Date().toISOString().split('T')[0];
@@ -329,11 +378,15 @@ function daysBetween(a, b) {
 function loadLocalState() {
   try { localOverrides = JSON.parse(localStorage.getItem('gc_overrides') || '{}'); } catch (e) { localOverrides = {}; }
   try { archivedEvents = JSON.parse(localStorage.getItem('gc_archive') || '{}'); } catch (e) { archivedEvents = {}; }
+  try { quests = JSON.parse(localStorage.getItem('gc_quests') || '{}'); } catch (e) { quests = {}; }
+  try { questLog = JSON.parse(localStorage.getItem('gc_quest_log') || '[]'); } catch (e) { questLog = []; }
 }
 
 function saveLocalState() {
   localStorage.setItem('gc_overrides', JSON.stringify(localOverrides));
   localStorage.setItem('gc_archive', JSON.stringify(archivedEvents));
+  localStorage.setItem('gc_quests', JSON.stringify(quests));
+  localStorage.setItem('gc_quest_log', JSON.stringify(questLog));
 }
 
 async function reloadFromServer() {
@@ -361,9 +414,11 @@ function switchView(view) {
   document.getElementById('tab-list').classList.toggle('active', view === 'list');
   document.getElementById('tab-timeline').classList.toggle('active', view === 'timeline');
   document.getElementById('tab-archive').classList.toggle('active', view === 'archive');
+  document.getElementById('tab-quests').classList.toggle('active', view === 'quests');
   document.getElementById('view-list').classList.toggle('active', view === 'list');
   document.getElementById('view-timeline').classList.toggle('active', view === 'timeline');
   document.getElementById('view-archive').classList.toggle('active', view === 'archive');
+  document.getElementById('view-quests').classList.toggle('active', view === 'quests');
   renderAll();
 }
 
@@ -371,7 +426,8 @@ function renderAll() {
   document.getElementById('today').textContent = new Date().toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
   if (currentView === 'list') renderList();
   else if (currentView === 'timeline') renderTimeline();
-  else renderArchive();
+  else if (currentView === 'archive') renderArchive();
+  else renderQuests();
 }
 
 function renderArchive() {
@@ -404,6 +460,76 @@ function restoreEvent(id) {
   delete archivedEvents[id];
   saveLocalState();
   renderAll();
+}
+
+function renderQuests() {
+  var container = document.getElementById('quests-list');
+
+  container.innerHTML = QUEST_GAMES.map(function(game) {
+    var color = COLORS[game] || 'var(--backlog)';
+    var gameQuests = quests[game] || [];
+    var gameLog = questLog.filter(function(q) { return q.game === game; })
+      .sort(function(a, b) { return new Date(b.completedAt) - new Date(a.completedAt); });
+    var logOpen = openQuestLogs[game];
+
+    var slots = '';
+    for (var i = 0; i < 3; i++) {
+      var q = gameQuests[i];
+      if (q) {
+        slots += '<div class="quest-slot">'
+          + '<button class="quest-checkbox" onclick="completeQuest(\'' + game + '\',\'' + q.id + '\')"></button>'
+          + '<span class="quest-text">' + q.text + '</span>'
+          + '</div>';
+      } else {
+        slots += '<div class="quest-empty-slot">'
+          + '<input type="text" placeholder="Add a quest..." id="qinput-' + game + '-' + i + '" onkeydown="if(event.key===\'Enter\')addQuest(\'' + game + '\',' + i + ')" />'
+          + '<button onclick="addQuest(\'' + game + '\',' + i + ')">Add</button>'
+          + '</div>';
+      }
+    }
+
+    var logHtml = '';
+    if (gameLog.length > 0) {
+      logHtml = '<span class="quest-log-toggle" onclick="toggleQuestLog(\'' + game + '\')">' + gameLog.length + ' completed &middot; ' + (logOpen ? 'hide' : 'show') + '</span>'
+        + '<div class="quest-log ' + (logOpen ? 'open' : '') + '">'
+        + gameLog.slice(0, 20).map(function(q) {
+            return '<div class="quest-log-item"><span>' + q.text + '</span><span>' + q.completedAt + '</span></div>';
+          }).join('')
+        + '</div>';
+    }
+
+    return '<div class="quest-card">'
+      + '<div class="quest-card-header"><span class="tag" style="background:' + color + '22;color:' + color + '">' + game + '</span></div>'
+      + slots
+      + logHtml
+      + '</div>';
+  }).join('');
+}
+
+function addQuest(game, slotIndex) {
+  var input = document.getElementById('qinput-' + game + '-' + slotIndex);
+  var text = input.value.trim();
+  if (!text) return;
+  if (!quests[game]) quests[game] = [];
+  quests[game].push({ id: 'q' + Date.now(), text: text });
+  saveLocalState();
+  renderQuests();
+}
+
+function completeQuest(game, id) {
+  var list = quests[game] || [];
+  var idx = list.findIndex(function(q) { return q.id === id; });
+  if (idx === -1) return;
+  var q = list[idx];
+  questLog.push({ game: game, text: q.text, completedAt: todayStr() });
+  list.splice(idx, 1);
+  saveLocalState();
+  renderQuests();
+}
+
+function toggleQuestLog(game) {
+  openQuestLogs[game] = !openQuestLogs[game];
+  renderQuests();
 }
 
 function renderList() {
