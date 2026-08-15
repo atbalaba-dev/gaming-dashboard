@@ -64,14 +64,6 @@
     "desc": "Edit this one directly as backlog progress changes."
   },
   {
-    "id": "g4a-202608a",
-    "game": "Genshin",
-    "title": "Spiral Abyss - monthly reset",
-    "start": "2026-07-16",
-    "end": "2026-08-16",
-    "desc": "CORRECTED: resets monthly on the 16th (not biweekly as originally assumed - that was from checking Abyss+Theater together, which are each monthly but offset by 2 weeks from each other). Your usual pace: start ~3-4 days after reset."
-  },
-  {
     "id": "g4b-202608",
     "game": "Genshin",
     "title": "Imaginarium Theater - monthly reset",
@@ -88,11 +80,51 @@
     "desc": "Also called 'Happy Summer.' Includes Beat the Heat, Summer Cookout, and Summer Skirmishes mini-events. Log in through Aug 18 for a Lingering Melody reward."
   },
   {
-    "id": "g3-202608-est",
+    "id": "g4a-202609",
     "game": "Genshin",
-    "title": "Stygian Onslaught - Disturbance Outbreak (estimated, verify)",
-    "start": "2026-08-18",
-    "end": "2026-08-28",
-    "desc": "Only the 10-day outbreak window matters (Dire Prestige artifact rewards). Estimated from historical pattern (1 week after version release) - 7.0 launches Aug 11 (today), so outbreak likely starts ~Aug 18. Confirm once 7.0 patch notes are fully out."
+    "title": "Spiral Abyss - monthly reset",
+    "start": "2026-08-16",
+    "end": "2026-09-16",
+    "desc": "Resets monthly on the 16th. Your usual pace: start ~3-4 days after reset."
+  },
+  {
+    "id": "g3-202608-confirmed",
+    "game": "Genshin",
+    "title": "Stygian Onslaught - Disturbance Outbreak",
+    "start": "2026-08-19",
+    "end": "2026-08-29",
+    "desc": "CONFIRMED (was estimated at Aug 18, actual is Aug 19). Only the 10-day outbreak window matters for Dire Prestige artifact rewards. Full event runs through Sep 22, but that part doesn't matter for rewards."
+  },
+  {
+    "id": "g6-202608",
+    "game": "Genshin",
+    "title": "Mutual Aid in Bloom: Into the Frostlands ends",
+    "start": "2026-08-12",
+    "end": "2026-08-24",
+    "desc": "Snezhnaya exploration event. Take photos, complete objectives, earn Fervor Coupons to build custom Lady Katheryne statues for your Serenitea Pot."
+  },
+  {
+    "id": "g7-202608-est",
+    "game": "Genshin",
+    "title": "Great Expeditionist Challenge ends (verify end date)",
+    "start": "2026-08-28",
+    "end": "2026-09-22",
+    "desc": "7.0 flagship event, free Diona reward. Confirmed start Aug 28; end date estimated at version boundary (Sep 22) - not yet confirmed, verify in-game closer to the date."
+  },
+  {
+    "id": "g8-202609-est",
+    "game": "Genshin",
+    "title": "Trial of the Bastion ends (verify end date)",
+    "start": "2026-09-07",
+    "end": "2026-09-22",
+    "desc": "3D tower defense mode. Confirmed start Sep 7; end date estimated at version boundary (Sep 22) - not yet confirmed, verify in-game closer to the date."
+  },
+  {
+    "id": "g9-202609",
+    "game": "Genshin",
+    "title": "Overflowing Abundance ends",
+    "start": "2026-09-14",
+    "end": "2026-09-21",
+    "desc": "Recurring farming event - double Talent Level-Up and Weapon Ascension rewards from domains. Runs one week."
   }
 ]
