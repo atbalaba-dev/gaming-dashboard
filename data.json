@@ -1,43 +1,11 @@
 [
   {
-    "id": "w4",
-    "game": "WWM",
-    "title": "Cutie Clash ends",
-    "start": "2026-07-23",
-    "end": "2026-08-20",
-    "desc": "Companion auto-battler mini-game from the new 2.0 'Unseen Approach' update. Earn Pawcket Money, build synergy decks."
-  },
-  {
-    "id": "w5",
-    "game": "WWM",
-    "title": "Mountain Autumn (Hidden Mountain) ends",
-    "start": "2026-07-30",
-    "end": "2026-08-21",
-    "desc": "Confirmed: July 30 - August 20, 2026. Case Files sleuthing available now; Contest of Ingenuity + Gearwheel Trial unlock Aug 6. Highland Heritage outfit set + Sovereign's Jade Accessory as rewards."
-  },
-  {
     "id": "p2",
     "game": "Pokopia",
     "title": "Fetching Scales for Feebas ends",
     "start": "2026-08-13",
     "end": "2026-08-28",
     "desc": "Feebas + Milotic event. Requires a rebuilt Pokemon Center (not the new Bubbly Basin one). Collect Prism Scales for swimming-themed furniture."
-  },
-  {
-    "id": "m1",
-    "game": "MH Wilds",
-    "title": "Festival of Accord: Flamefete ends",
-    "start": "2026-07-08",
-    "end": "2026-08-19",
-    "desc": "Summer festival. Already have Diver/Afi - check for anything new."
-  },
-  {
-    "id": "d1",
-    "game": "DBD",
-    "title": "Summer Screams ends",
-    "start": "2026-07-28",
-    "end": "2026-08-19",
-    "desc": "Rotating modes: Chaos Shuffle, Lights Out, 2v8. Runs 3 weeks total."
   },
   {
     "id": "d3",
@@ -72,14 +40,6 @@
     "desc": "Confirmed in-game: resets monthly, NOT biweekly like Abyss (was wrongly assumed to share Abyss's schedule). Your usual pace: start ~3-4 days after reset."
   },
   {
-    "id": "w6-202608",
-    "game": "WWM",
-    "title": "Summer Spree ends",
-    "start": "2026-08-06",
-    "end": "2026-08-21",
-    "desc": "Also called 'Happy Summer.' Includes Beat the Heat, Summer Cookout, and Summer Skirmishes mini-events. Log in through Aug 18 for a Lingering Melody reward."
-  },
-  {
     "id": "g4a-202609",
     "game": "Genshin",
     "title": "Spiral Abyss - monthly reset",
@@ -96,20 +56,12 @@
     "desc": "CONFIRMED (was estimated at Aug 18, actual is Aug 19). Only the 10-day outbreak window matters for Dire Prestige artifact rewards. Full event runs through Sep 22, but that part doesn't matter for rewards."
   },
   {
-    "id": "g6-202608",
-    "game": "Genshin",
-    "title": "Mutual Aid in Bloom: Into the Frostlands ends",
-    "start": "2026-08-12",
-    "end": "2026-08-24",
-    "desc": "Snezhnaya exploration event. Take photos, complete objectives, earn Fervor Coupons to build custom Lady Katheryne statues for your Serenitea Pot."
-  },
-  {
     "id": "g7-202608-est",
     "game": "Genshin",
-    "title": "Great Expeditionist Challenge ends (verify end date)",
+    "title": "Great Expeditionist Challenge ends",
     "start": "2026-08-28",
-    "end": "2026-09-22",
-    "desc": "7.0 flagship event, free Diona reward. Confirmed start Aug 28; end date estimated at version boundary (Sep 22) - not yet confirmed, verify in-game closer to the date."
+    "end": "2026-09-14",
+    "desc": "CONFIRMED (was estimated at Sep 22). 7.0 flagship event, free Diona reward. Runs Aug 28 - Sep 14, spanning the Phase 1/2 banner transition."
   },
   {
     "id": "g8-202609-est",
@@ -126,5 +78,13 @@
     "start": "2026-09-14",
     "end": "2026-09-21",
     "desc": "Recurring farming event - double Talent Level-Up and Weapon Ascension rewards from domains. Runs one week."
+  },
+  {
+    "id": "w7-202608-est",
+    "game": "WWM",
+    "title": "Sweetened Summer ends (verify end date)",
+    "start": "2026-08-20",
+    "end": "2026-09-10",
+    "desc": "New cosmetic event from the 2.1 Clouded Revelation update. Includes Heaven's Plea makeup reward. End date not yet confirmed - estimated at 3 weeks, verify in-game."
   }
 ]
