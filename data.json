@@ -78,5 +78,21 @@
     "start": "2026-08-20",
     "end": "2026-09-10",
     "desc": "New cosmetic event from the 2.1 Clouded Revelation update. Includes Heaven's Plea makeup reward. End date not yet confirmed - estimated at 3 weeks, verify in-game."
+  },
+  {
+    "id": "w8-202608",
+    "game": "WWM",
+    "title": "Cloudtop Ascent ends",
+    "start": "2026-08-20",
+    "end": "2026-09-15",
+    "desc": "Server-wide community event to rebuild the Cloudstair and unlock Heaven's Threshold. Complete Mountain Express/Material Gathering for Work Merit, exchange for Hero Titles, accessories, Lingering Melody."
+  },
+  {
+    "id": "w9-202608-est",
+    "game": "WWM",
+    "title": "Ghost Month / Reflection Temple ends (verify end date)",
+    "start": "2026-08-20",
+    "end": "2026-09-10",
+    "desc": "Haunted shrine survival mode at Heaven's Threshold, timed to real-world Ghost Month (peaks Aug 27). End date estimated from the real festival's end (Sep 10) - verify exact in-game cutoff."
   }
 ]
