@@ -118,5 +118,13 @@
     "start": "2026-08-26",
     "end": "2026-09-09",
     "desc": "Confirmed in-game (Aug 26): 12d 23h left, ending ~Sep 8. Real gameplay event with rewards. Start date estimated - verify."
+  },
+  {
+    "id": "w13-202608",
+    "game": "WWM",
+    "title": "Magpie's Message (Qixi Festival) ends",
+    "start": "2026-08-27",
+    "end": "2026-09-16",
+    "desc": "Confirmed in-game (Aug 27): 18d 20h left, ending ~Sep 15 - same cluster as Cloudtop Ascent/Reflection Temple/Bounty Order. Sub-quests: Destined Match, Harmony of Hearts, Bloomworks active now; Qixi Snapshot unlocks Aug 30."
   }
 ]
