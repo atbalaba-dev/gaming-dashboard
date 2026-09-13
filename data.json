@@ -24,12 +24,12 @@
     "desc": "CONFIRMED (was estimated at Sep 22). 7.0 flagship event, free Diona reward. Runs Aug 28 - Sep 14, spanning the Phase 1/2 banner transition."
   },
   {
-    "id": "g8-202609-est",
+    "id": "g8-202609",
     "game": "Genshin",
-    "title": "Trial of the Bastion ends (verify end date)",
+    "title": "Trial of the Bastion ends",
     "start": "2026-09-07",
-    "end": "2026-09-22",
-    "desc": "3D tower defense mode. Confirmed start Sep 7; end date estimated at version boundary (Sep 22) - not yet confirmed, verify in-game closer to the date."
+    "end": "2026-09-17",
+    "desc": "CONFIRMED in-game (Sep 13): 3 days left, ending ~Sep 16 (was placeholder estimate of Sep 22). 3D tower defense mode."
   },
   {
     "id": "g9-202609",
