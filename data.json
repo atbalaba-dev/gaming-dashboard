@@ -1,13 +1,5 @@
 [
   {
-    "id": "p2",
-    "game": "Pokopia",
-    "title": "Fetching Scales for Feebas ends",
-    "start": "2026-08-13",
-    "end": "2026-08-28",
-    "desc": "Feebas + Milotic event. Requires a rebuilt Pokemon Center (not the new Bubbly Basin one). Collect Prism Scales for swimming-themed furniture."
-  },
-  {
     "id": "d3",
     "game": "DBD",
     "title": "Sunflesh Rift closes",
@@ -16,36 +8,12 @@
     "desc": "Reminder only - tiers lost after close."
   },
   {
-    "id": "o1",
-    "game": "Outlast",
-    "title": "Blood Drive ends",
-    "start": "2026-07-14",
-    "end": "2026-08-26",
-    "desc": "Donate blood for Event Tokens before they're forfeited."
-  },
-  {
-    "id": "g4b-202608",
-    "game": "Genshin",
-    "title": "Imaginarium Theater - monthly reset",
-    "start": "2026-08-01",
-    "end": "2026-08-31",
-    "desc": "Confirmed in-game: resets monthly, NOT biweekly like Abyss (was wrongly assumed to share Abyss's schedule). Your usual pace: start ~3-4 days after reset."
-  },
-  {
     "id": "g4a-202609",
     "game": "Genshin",
     "title": "Spiral Abyss - monthly reset",
     "start": "2026-08-16",
     "end": "2026-09-16",
     "desc": "Resets monthly on the 16th. Your usual pace: start ~3-4 days after reset."
-  },
-  {
-    "id": "g3-202608-confirmed",
-    "game": "Genshin",
-    "title": "Stygian Onslaught - Disturbance Outbreak",
-    "start": "2026-08-19",
-    "end": "2026-08-29",
-    "desc": "CONFIRMED (was estimated at Aug 18, actual is Aug 19). Only the 10-day outbreak window matters for Dire Prestige artifact rewards. Full event runs through Sep 22, but that part doesn't matter for rewards."
   },
   {
     "id": "g7-202608-est",
@@ -72,14 +40,6 @@
     "desc": "Recurring farming event - double Talent Level-Up and Weapon Ascension rewards from domains. Runs one week."
   },
   {
-    "id": "w7-202608",
-    "game": "WWM",
-    "title": "Summer Splash ends",
-    "start": "2026-08-20",
-    "end": "2026-09-13",
-    "desc": "CONFIRMED in-game as 'Summer Splash' (was tracked under dev-notes name 'Sweetened Summer'). Uses Summer Melons currency. 16d 23h left as of Aug 26, ending ~Sep 12."
-  },
-  {
     "id": "w8-202608",
     "game": "WWM",
     "title": "Cloudtop Ascent ends",
@@ -104,27 +64,43 @@
     "desc": "Confirmed in-game (Aug 26): 19d 23h left, ending ~Sep 15, same cluster as Cloudtop Ascent/Reflection Temple. Start date estimated at Aug 20 update."
   },
   {
-    "id": "w11-202608",
-    "game": "WWM",
-    "title": "Starfall Benediction ends",
-    "start": "2026-08-26",
-    "end": "2026-09-09",
-    "desc": "Confirmed in-game (Aug 26): 12d 23h left, ending ~Sep 8. Real gameplay event with rewards. Start date estimated - verify."
-  },
-  {
-    "id": "w12-202608",
-    "game": "WWM",
-    "title": "Fleeting Brilliance ends",
-    "start": "2026-08-26",
-    "end": "2026-09-09",
-    "desc": "Confirmed in-game (Aug 26): 12d 23h left, ending ~Sep 8. Real gameplay event with rewards. Start date estimated - verify."
-  },
-  {
     "id": "w13-202608",
     "game": "WWM",
     "title": "Magpie's Message (Qixi Festival) ends",
     "start": "2026-08-27",
     "end": "2026-09-16",
     "desc": "Confirmed in-game (Aug 27): 18d 20h left, ending ~Sep 15 - same cluster as Cloudtop Ascent/Reflection Temple/Bounty Order. Sub-quests: Destined Match, Harmony of Hearts, Bloomworks active now; Qixi Snapshot unlocks Aug 30."
+  },
+  {
+    "id": "g4b-202609",
+    "game": "Genshin",
+    "title": "Imaginarium Theater - monthly reset",
+    "start": "2026-09-01",
+    "end": "2026-10-01",
+    "desc": "New season confirmed for 7.0: Hydro/Electro/Dendro required. Opening chars: Columbina, Xingqiu, Cyno, Kuki Shinobu, Lauma, Kaveh. Your usual pace: start ~3-4 days after reset."
+  },
+  {
+    "id": "g10-202608",
+    "game": "Genshin",
+    "title": "The Godforsaken Frostlands ends",
+    "start": "2026-08-12",
+    "end": "2026-11-03",
+    "desc": "MISSED IN ORIGINAL RESEARCH - found during Sep 13 check. Exploration event across 5 new Snezhnaya areas (Volkodlak Tundra, Everfrozen Earth, Fellfrost Peak, Flamefeather Valley, White Birch Snowgrave). Reach 80% exploration in each for 400 Primogems total. Crosses version boundary, no rush."
+  },
+  {
+    "id": "d4-202609",
+    "game": "DBD",
+    "title": "2v8 mode returns ends",
+    "start": "2026-09-08",
+    "end": "2026-09-29",
+    "desc": "Limited-time return of 2v8 game mode. New Xenomorph killer joins the roster alongside a new Alien Collection."
+  },
+  {
+    "id": "o2-202609",
+    "game": "Outlast",
+    "title": "Chemical Leak ends",
+    "start": "2026-09-08",
+    "end": "2026-10-06",
+    "desc": "Navigate gas-filled zones, hunt valves, seal leaks. Earn Event Tokens for exclusive cosmetics catalog - catalog closes permanently after, unspent tokens forfeited."
   }
 ]
