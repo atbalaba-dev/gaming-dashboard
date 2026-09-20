@@ -56,14 +56,6 @@
     "desc": "Resets monthly on the 16th. Your usual pace: start ~3-4 days after reset."
   },
   {
-    "id": "g11-202609-est",
-    "game": "Genshin",
-    "title": "6th Anniversary login rewards (verify claim window)",
-    "start": "2026-09-23",
-    "end": "2026-10-08",
-    "desc": "7.1 launches Sep 23, anniversary itself is Sep 28. Confirmed: 1,600 Primogems, 10 Intertwined Fates, standard 5-star selector, anniversary glider. Claim window length not officially confirmed - estimated 2 weeks, verify in-game."
-  },
-  {
     "id": "g12-202609",
     "game": "Genshin",
     "title": "Free event-limited 5-star (finish Snezhnaya Ch. IV by Nov 3)",
@@ -86,5 +78,53 @@
     "start": "2026-09-20",
     "end": "2026-09-28",
     "desc": "Confirmed dates. Second run of this event. Talk to Bulbasaur at a Pokemon Center to enter."
+  },
+  {
+    "id": "g13-202609",
+    "game": "Genshin",
+    "title": "Silverwing in Pursuit of the Moon ends",
+    "start": "2026-09-24",
+    "end": "2026-10-12",
+    "desc": "Official 7.1 event calendar confirmed. Flagship-looking event, x950 reward icon shown."
+  },
+  {
+    "id": "g14-202609",
+    "game": "Genshin",
+    "title": "Vesna's Patrol Mission ends",
+    "start": "2026-09-24",
+    "end": "2026-10-04",
+    "desc": "Official 7.1 calendar confirmed. Community Event, x40 reward icon."
+  },
+  {
+    "id": "g15-202610",
+    "game": "Genshin",
+    "title": "Starlit Gala Phase 1 ends",
+    "start": "2026-10-01",
+    "end": "2026-10-22",
+    "desc": "Official 7.1 calendar confirmed. Phase 1 only (not the Phase 2 web event). x20 reward icon."
+  },
+  {
+    "id": "g16-202610",
+    "game": "Genshin",
+    "title": "Predictive Victory Dynamics ends",
+    "start": "2026-10-12",
+    "end": "2026-10-20",
+    "desc": "Official 7.1 calendar confirmed. x420 reward icon."
+  },
+  {
+    "id": "g17-202610",
+    "game": "Genshin",
+    "title": "Carefree Snowball Fight ends",
+    "start": "2026-10-21",
+    "end": "2026-11-02",
+    "desc": "Official 7.1 calendar confirmed. x420 reward icon."
+  },
+  {
+    "id": "g18-202610",
+    "game": "Genshin",
+    "title": "Overflowing Favor ends",
+    "start": "2026-10-26",
+    "end": "2026-11-02",
+    "desc": "Official 7.1 calendar confirmed. x420 reward icon. Different from Overflowing Abundance (Sep event)."
   }
 ]
