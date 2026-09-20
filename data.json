@@ -8,68 +8,12 @@
     "desc": "Reminder only - tiers lost after close."
   },
   {
-    "id": "g4a-202609",
-    "game": "Genshin",
-    "title": "Spiral Abyss - monthly reset",
-    "start": "2026-08-16",
-    "end": "2026-09-16",
-    "desc": "Resets monthly on the 16th. Your usual pace: start ~3-4 days after reset."
-  },
-  {
-    "id": "g7-202608-est",
-    "game": "Genshin",
-    "title": "Great Expeditionist Challenge ends",
-    "start": "2026-08-28",
-    "end": "2026-09-14",
-    "desc": "CONFIRMED (was estimated at Sep 22). 7.0 flagship event, free Diona reward. Runs Aug 28 - Sep 14, spanning the Phase 1/2 banner transition."
-  },
-  {
-    "id": "g8-202609",
-    "game": "Genshin",
-    "title": "Trial of the Bastion ends",
-    "start": "2026-09-07",
-    "end": "2026-09-18",
-    "desc": "CONFIRMED in-game (Sep 13): 3d 18h left, ending ~Sep 17 (was placeholder estimate of Sep 22). 3D tower defense mode."
-  },
-  {
     "id": "g9-202609",
     "game": "Genshin",
     "title": "Overflowing Abundance ends",
     "start": "2026-09-14",
     "end": "2026-09-21",
     "desc": "Recurring farming event - double Talent Level-Up and Weapon Ascension rewards from domains. Runs one week."
-  },
-  {
-    "id": "w8-202608",
-    "game": "WWM",
-    "title": "Cloudtop Ascent ends",
-    "start": "2026-08-20",
-    "end": "2026-09-16",
-    "desc": "Confirmed in-game (Aug 26): 19d 23h left, ending ~Sep 15. Server-wide event to unlock Heaven's Threshold. Work Merit for Hero Titles, accessories, Lingering Melody."
-  },
-  {
-    "id": "w9-202608",
-    "game": "WWM",
-    "title": "Ghost Month / Reflection Temple ends",
-    "start": "2026-08-20",
-    "end": "2026-09-16",
-    "desc": "CONFIRMED in-game (Aug 26): 19d 23h left, ending ~Sep 15 (was estimated Sep 10). Haunted shrine survival mode at Heaven's Threshold."
-  },
-  {
-    "id": "w10-202608",
-    "game": "WWM",
-    "title": "Bounty Order ends",
-    "start": "2026-08-20",
-    "end": "2026-09-16",
-    "desc": "Confirmed in-game (Aug 26): 19d 23h left, ending ~Sep 15, same cluster as Cloudtop Ascent/Reflection Temple. Start date estimated at Aug 20 update."
-  },
-  {
-    "id": "w13-202608",
-    "game": "WWM",
-    "title": "Magpie's Message (Qixi Festival) ends",
-    "start": "2026-08-27",
-    "end": "2026-09-16",
-    "desc": "Confirmed in-game (Aug 27): 18d 20h left, ending ~Sep 15 - same cluster as Cloudtop Ascent/Reflection Temple/Bounty Order. Sub-quests: Destined Match, Harmony of Hearts, Bloomworks active now; Qixi Snapshot unlocks Aug 30."
   },
   {
     "id": "g4b-202609",
@@ -102,5 +46,45 @@
     "start": "2026-09-08",
     "end": "2026-10-06",
     "desc": "Navigate gas-filled zones, hunt valves, seal leaks. Earn Event Tokens for exclusive cosmetics catalog - catalog closes permanently after, unspent tokens forfeited."
+  },
+  {
+    "id": "g4a-202610",
+    "game": "Genshin",
+    "title": "Spiral Abyss - monthly reset",
+    "start": "2026-09-16",
+    "end": "2026-10-16",
+    "desc": "Resets monthly on the 16th. Your usual pace: start ~3-4 days after reset."
+  },
+  {
+    "id": "g11-202609-est",
+    "game": "Genshin",
+    "title": "6th Anniversary login rewards (verify claim window)",
+    "start": "2026-09-23",
+    "end": "2026-10-08",
+    "desc": "7.1 launches Sep 23, anniversary itself is Sep 28. Confirmed: 1,600 Primogems, 10 Intertwined Fates, standard 5-star selector, anniversary glider. Claim window length not officially confirmed - estimated 2 weeks, verify in-game."
+  },
+  {
+    "id": "g12-202609",
+    "game": "Genshin",
+    "title": "Free event-limited 5-star (finish Snezhnaya Ch. IV by Nov 3)",
+    "start": "2026-09-23",
+    "end": "2026-11-03",
+    "desc": "CONFIRMED: complete Chapter IV of the Snezhnaya Archon Quest by Nov 3, 2026 to claim a free event-limited 5-star character. Real deadline, don't miss."
+  },
+  {
+    "id": "w14-202609",
+    "game": "WWM",
+    "title": "Trekking for Treasures ends",
+    "start": "2026-09-16",
+    "end": "2026-10-15",
+    "desc": "Confirmed dates from official post. Hide-and-seek treasure hunt with Elder Stork in Mohist City. Submit 6-item treasure sets for Pose: Top Seeker, Inscription: Treasure Locator."
+  },
+  {
+    "id": "p3-202609",
+    "game": "Pokopia",
+    "title": "Bulbasaur's Jump Rope Contest ends",
+    "start": "2026-09-20",
+    "end": "2026-09-28",
+    "desc": "Confirmed dates. Second run of this event. Talk to Bulbasaur at a Pokemon Center to enter."
   }
 ]
