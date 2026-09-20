@@ -126,5 +126,13 @@
     "start": "2026-10-26",
     "end": "2026-11-02",
     "desc": "Official 7.1 calendar confirmed. x420 reward icon. Different from Overflowing Abundance (Sep event)."
+  },
+  {
+    "id": "g19-202609-est",
+    "game": "Genshin",
+    "title": "Stygian Onslaught - Disturbance Outbreak (estimated, verify once live)",
+    "start": "2026-09-30",
+    "end": "2026-10-10",
+    "desc": "Full Onslaught window confirmed Sep 30-Nov 3. Outbreak estimated from established pattern (always the first 10 days of the cycle) - not yet live, verify once it starts."
   }
 ]
