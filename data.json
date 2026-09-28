@@ -8,14 +8,6 @@
     "desc": "Reminder only - tiers lost after close."
   },
   {
-    "id": "g9-202609",
-    "game": "Genshin",
-    "title": "Overflowing Abundance ends",
-    "start": "2026-09-14",
-    "end": "2026-09-21",
-    "desc": "Recurring farming event - double Talent Level-Up and Weapon Ascension rewards from domains. Runs one week."
-  },
-  {
     "id": "g4b-202609",
     "game": "Genshin",
     "title": "Imaginarium Theater - monthly reset",
@@ -72,14 +64,6 @@
     "desc": "Confirmed dates from official post. Hide-and-seek treasure hunt with Elder Stork in Mohist City. Submit 6-item treasure sets for Pose: Top Seeker, Inscription: Treasure Locator."
   },
   {
-    "id": "p3-202609",
-    "game": "Pokopia",
-    "title": "Bulbasaur's Jump Rope Contest ends",
-    "start": "2026-09-20",
-    "end": "2026-09-28",
-    "desc": "Confirmed dates. Second run of this event. Talk to Bulbasaur at a Pokemon Center to enter."
-  },
-  {
     "id": "g13-202609",
     "game": "Genshin",
     "title": "Silverwing in Pursuit of the Moon ends",
@@ -134,5 +118,13 @@
     "start": "2026-09-30",
     "end": "2026-10-10",
     "desc": "Full Onslaught window confirmed Sep 30-Nov 3. Outbreak estimated from established pattern (always the first 10 days of the cycle) - not yet live, verify once it starts."
+  },
+  {
+    "id": "m2-202609",
+    "game": "MH Wilds",
+    "title": "Festival of Accord: Dreamspell ends",
+    "start": "2026-09-22",
+    "end": "2026-11-04",
+    "desc": "Halloween festival, already live per Capcom's post (live until Nov 3, 5:59pm PT, so early Nov 4 in Manila). Start date is approximate, check the in-game timer. Note whether you already own the rewards from the earlier runs."
   }
 ]
