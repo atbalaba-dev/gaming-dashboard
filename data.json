@@ -122,12 +122,12 @@
     "type": "event"
   },
   {
-    "id": "g19-202609-est",
+    "id": "g19-202609",
     "game": "Genshin",
-    "title": "Stygian Onslaught - Disturbance Outbreak (estimated, verify once live)",
+    "title": "Stygian Onslaught - Disturbance Outbreak",
     "start": "2026-09-30",
     "end": "2026-10-10",
-    "desc": "Full Onslaught window confirmed Sep 30-Nov 3. Outbreak estimated from established pattern (always the first 10 days of the cycle) - not yet live, verify once it starts.",
+    "desc": "CONFIRMED in-game (Oct 2): 7d19h remaining, ending Oct 10 - matches the established first-10-days pattern exactly (3rd consecutive cycle confirming this).",
     "type": "cycle"
   },
   {
