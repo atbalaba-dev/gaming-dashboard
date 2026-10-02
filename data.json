@@ -13,7 +13,8 @@
     "title": "Imaginarium Theater - monthly reset",
     "start": "2026-09-01",
     "end": "2026-10-01",
-    "desc": "New season confirmed for 7.0: Hydro/Electro/Dendro required. Opening chars: Columbina, Xingqiu, Cyno, Kuki Shinobu, Lauma, Kaveh. Your usual pace: start ~3-4 days after reset."
+    "desc": "New season confirmed for 7.0: Hydro/Electro/Dendro required. Opening chars: Columbina, Xingqiu, Cyno, Kuki Shinobu, Lauma, Kaveh. Your usual pace: start ~3-4 days after reset.",
+    "type": "cycle"
   },
   {
     "id": "g10-202608",
@@ -21,7 +22,8 @@
     "title": "The Godforsaken Frostlands ends",
     "start": "2026-08-12",
     "end": "2026-11-03",
-    "desc": "MISSED IN ORIGINAL RESEARCH - found during Sep 13 check. Exploration event across 5 new Snezhnaya areas (Volkodlak Tundra, Everfrozen Earth, Fellfrost Peak, Flamefeather Valley, White Birch Snowgrave). Reach 80% exploration in each for 400 Primogems total. Crosses version boundary, no rush."
+    "desc": "MISSED IN ORIGINAL RESEARCH - found during Sep 13 check. Exploration event across 5 new Snezhnaya areas (Volkodlak Tundra, Everfrozen Earth, Fellfrost Peak, Flamefeather Valley, White Birch Snowgrave). Reach 80% exploration in each for 400 Primogems total. Crosses version boundary, no rush.",
+    "type": "event"
   },
   {
     "id": "d4-202609",
@@ -45,7 +47,8 @@
     "title": "Spiral Abyss - monthly reset",
     "start": "2026-09-16",
     "end": "2026-10-16",
-    "desc": "Resets monthly on the 16th. Your usual pace: start ~3-4 days after reset."
+    "desc": "Resets monthly on the 16th. Your usual pace: start ~3-4 days after reset.",
+    "type": "cycle"
   },
   {
     "id": "g12-202609",
@@ -53,7 +56,8 @@
     "title": "Free event-limited 5-star (finish Snezhnaya Ch. IV by Nov 3)",
     "start": "2026-09-23",
     "end": "2026-11-03",
-    "desc": "CONFIRMED: complete Chapter IV of the Snezhnaya Archon Quest by Nov 3, 2026 to claim a free event-limited 5-star character. Real deadline, don't miss."
+    "desc": "CONFIRMED: complete Chapter IV of the Snezhnaya Archon Quest by Nov 3, 2026 to claim a free event-limited 5-star character. Real deadline, don't miss.",
+    "type": "event"
   },
   {
     "id": "w14-202609",
@@ -69,7 +73,8 @@
     "title": "Silverwing in Pursuit of the Moon ends",
     "start": "2026-09-24",
     "end": "2026-10-12",
-    "desc": "Official 7.1 event calendar confirmed. Flagship-looking event, x950 reward icon shown."
+    "desc": "Official 7.1 event calendar confirmed. Flagship-looking event, x950 reward icon shown.",
+    "type": "event"
   },
   {
     "id": "g14-202609",
@@ -77,7 +82,8 @@
     "title": "Vesna's Patrol Mission ends",
     "start": "2026-09-24",
     "end": "2026-10-04",
-    "desc": "Official 7.1 calendar confirmed. Community Event, x40 reward icon."
+    "desc": "Official 7.1 calendar confirmed. Community Event, x40 reward icon.",
+    "type": "event"
   },
   {
     "id": "g15-202610",
@@ -85,7 +91,8 @@
     "title": "Starlit Gala Phase 1 ends",
     "start": "2026-10-01",
     "end": "2026-10-22",
-    "desc": "Official 7.1 calendar confirmed. Phase 1 only (not the Phase 2 web event). x20 reward icon."
+    "desc": "Official 7.1 calendar confirmed. Phase 1 only (not the Phase 2 web event). x20 reward icon.",
+    "type": "event"
   },
   {
     "id": "g16-202610",
@@ -93,7 +100,8 @@
     "title": "Predictive Victory Dynamics ends",
     "start": "2026-10-12",
     "end": "2026-10-20",
-    "desc": "Official 7.1 calendar confirmed. x420 reward icon."
+    "desc": "Official 7.1 calendar confirmed. x420 reward icon.",
+    "type": "event"
   },
   {
     "id": "g17-202610",
@@ -101,7 +109,8 @@
     "title": "Carefree Snowball Fight ends",
     "start": "2026-10-21",
     "end": "2026-11-02",
-    "desc": "Official 7.1 calendar confirmed. x420 reward icon."
+    "desc": "Official 7.1 calendar confirmed. x420 reward icon.",
+    "type": "event"
   },
   {
     "id": "g18-202610",
@@ -109,7 +118,8 @@
     "title": "Overflowing Favor ends",
     "start": "2026-10-26",
     "end": "2026-11-02",
-    "desc": "Official 7.1 calendar confirmed. x420 reward icon. Different from Overflowing Abundance (Sep event)."
+    "desc": "Official 7.1 calendar confirmed. x420 reward icon. Different from Overflowing Abundance (Sep event).",
+    "type": "event"
   },
   {
     "id": "g19-202609-est",
@@ -117,7 +127,8 @@
     "title": "Stygian Onslaught - Disturbance Outbreak (estimated, verify once live)",
     "start": "2026-09-30",
     "end": "2026-10-10",
-    "desc": "Full Onslaught window confirmed Sep 30-Nov 3. Outbreak estimated from established pattern (always the first 10 days of the cycle) - not yet live, verify once it starts."
+    "desc": "Full Onslaught window confirmed Sep 30-Nov 3. Outbreak estimated from established pattern (always the first 10 days of the cycle) - not yet live, verify once it starts.",
+    "type": "cycle"
   },
   {
     "id": "m2-202609",
