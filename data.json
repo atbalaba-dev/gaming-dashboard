@@ -1,22 +1,5 @@
 [
   {
-    "id": "d3",
-    "game": "DBD",
-    "title": "Sunflesh Rift closes",
-    "start": "2026-07-21",
-    "end": "2026-10-06",
-    "desc": "Reminder only - tiers lost after close."
-  },
-  {
-    "id": "g4b-202609",
-    "game": "Genshin",
-    "title": "Imaginarium Theater - monthly reset",
-    "start": "2026-09-01",
-    "end": "2026-10-01",
-    "desc": "New season confirmed for 7.0: Hydro/Electro/Dendro required. Opening chars: Columbina, Xingqiu, Cyno, Kuki Shinobu, Lauma, Kaveh. Your usual pace: start ~3-4 days after reset.",
-    "type": "cycle"
-  },
-  {
     "id": "g10-202608",
     "game": "Genshin",
     "title": "The Godforsaken Frostlands ends",
@@ -24,22 +7,6 @@
     "end": "2026-11-03",
     "desc": "MISSED IN ORIGINAL RESEARCH - found during Sep 13 check. Exploration event across 5 new Snezhnaya areas (Volkodlak Tundra, Everfrozen Earth, Fellfrost Peak, Flamefeather Valley, White Birch Snowgrave). Reach 80% exploration in each for 400 Primogems total. Crosses version boundary, no rush.",
     "type": "event"
-  },
-  {
-    "id": "d4-202609",
-    "game": "DBD",
-    "title": "2v8 mode returns ends",
-    "start": "2026-09-08",
-    "end": "2026-09-29",
-    "desc": "Limited-time return of 2v8 game mode. New Xenomorph killer joins the roster alongside a new Alien Collection."
-  },
-  {
-    "id": "o2-202609",
-    "game": "Outlast",
-    "title": "Chemical Leak ends",
-    "start": "2026-09-08",
-    "end": "2026-10-06",
-    "desc": "Navigate gas-filled zones, hunt valves, seal leaks. Earn Event Tokens for exclusive cosmetics catalog - catalog closes permanently after, unspent tokens forfeited."
   },
   {
     "id": "g4a-202610",
@@ -66,24 +33,6 @@
     "start": "2026-09-16",
     "end": "2026-10-15",
     "desc": "Confirmed dates from official post. Hide-and-seek treasure hunt with Elder Stork in Mohist City. Submit 6-item treasure sets for Pose: Top Seeker, Inscription: Treasure Locator."
-  },
-  {
-    "id": "g13-202609",
-    "game": "Genshin",
-    "title": "Silverwing in Pursuit of the Moon ends",
-    "start": "2026-09-24",
-    "end": "2026-10-12",
-    "desc": "Official 7.1 event calendar confirmed. Flagship-looking event, x950 reward icon shown.",
-    "type": "event"
-  },
-  {
-    "id": "g14-202609",
-    "game": "Genshin",
-    "title": "Vesna's Patrol Mission ends",
-    "start": "2026-09-24",
-    "end": "2026-10-04",
-    "desc": "Official 7.1 calendar confirmed. Community Event, x40 reward icon.",
-    "type": "event"
   },
   {
     "id": "g15-202610",
@@ -122,20 +71,71 @@
     "type": "event"
   },
   {
-    "id": "g19-202609",
-    "game": "Genshin",
-    "title": "Stygian Onslaught - Disturbance Outbreak",
-    "start": "2026-09-30",
-    "end": "2026-10-10",
-    "desc": "CONFIRMED in-game (Oct 2): 7d19h remaining, ending Oct 10 - matches the established first-10-days pattern exactly (3rd consecutive cycle confirming this).",
-    "type": "cycle"
-  },
-  {
     "id": "m2-202609",
     "game": "MH Wilds",
     "title": "Festival of Accord: Dreamspell ends",
     "start": "2026-09-22",
     "end": "2026-11-04",
     "desc": "Halloween festival, already live per Capcom's post (live until Nov 3, 5:59pm PT, so early Nov 4 in Manila). Start date is approximate, check the in-game timer. Note whether you already own the rewards from the earlier runs."
+  },
+  {
+    "id": "g4b-202610",
+    "game": "Genshin",
+    "title": "Imaginarium Theater - monthly reset",
+    "start": "2026-10-01",
+    "end": "2026-11-01",
+    "desc": "Hydro/Cryo/Anemo required. Opening chars: Neuvillette, Barbara, Citlali, Kaeya, Wanderer, Prune. Your usual pace: start ~3-4 days after reset.",
+    "type": "cycle"
+  },
+  {
+    "id": "g4a-202611",
+    "game": "Genshin",
+    "title": "Spiral Abyss - monthly reset",
+    "start": "2026-10-16",
+    "end": "2026-11-16",
+    "desc": "Superconduct/Stellar-Conduct modifier. Resets monthly on the 16th. Your usual pace: start ~3-4 days after reset.",
+    "type": "cycle"
+  },
+  {
+    "id": "g20-202610",
+    "game": "Genshin",
+    "title": "Tabletop Troupe: A Gathering on Adventure's Eve ends",
+    "start": "2026-09-23",
+    "end": "2026-11-04",
+    "desc": "7.1 limited-time event, ends Nov 3 2:59 PM Manila per genshin-builds timeline.",
+    "type": "event"
+  },
+  {
+    "id": "g21-202610",
+    "game": "Genshin",
+    "title": "Across the Frozen Wilds, Honing One's Edge ends",
+    "start": "2026-09-23",
+    "end": "2026-11-04",
+    "desc": "7.1 limited-time event, ends Nov 3 2:59 PM Manila per genshin-builds timeline.",
+    "type": "event"
+  },
+  {
+    "id": "w15-202610",
+    "game": "WWM",
+    "title": "Lucky Turtle Match ends",
+    "start": "2026-09-16",
+    "end": "2026-10-16",
+    "desc": "Confirmed from official post: ends Oct 15 04:59 UTC (12:59 PM Manila). Lotus Pond event: pray and match lucky turtles."
+  },
+  {
+    "id": "po1-202610",
+    "game": "Pokopia",
+    "title": "Pumpkaboo's Sweet Surprises ends",
+    "start": "2026-10-17",
+    "end": "2026-11-02",
+    "desc": "Halloween Pokemon event, Oct 17 to Nov 1 per Serebii."
+  },
+  {
+    "id": "d5-202610",
+    "game": "DBD",
+    "title": "Haunted by Daylight ends (estimated, verify)",
+    "start": "2026-10-13",
+    "end": "2026-11-04",
+    "desc": "Halloween event, runs three weeks from Oct 13. End date estimated, check in-game timer."
   }
 ]
