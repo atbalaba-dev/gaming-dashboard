@@ -9,15 +9,6 @@
     "type": "event"
   },
   {
-    "id": "g4a-202610",
-    "game": "Genshin",
-    "title": "Spiral Abyss - monthly reset",
-    "start": "2026-09-16",
-    "end": "2026-10-16",
-    "desc": "Resets monthly on the 16th. Your usual pace: start ~3-4 days after reset.",
-    "type": "cycle"
-  },
-  {
     "id": "g12-202609",
     "game": "Genshin",
     "title": "Free event-limited 5-star (finish Snezhnaya Ch. IV by Nov 3)",
@@ -27,29 +18,12 @@
     "type": "event"
   },
   {
-    "id": "w14-202609",
-    "game": "WWM",
-    "title": "Trekking for Treasures ends",
-    "start": "2026-09-16",
-    "end": "2026-10-15",
-    "desc": "Confirmed dates from official post. Hide-and-seek treasure hunt with Elder Stork in Mohist City. Submit 6-item treasure sets for Pose: Top Seeker, Inscription: Treasure Locator."
-  },
-  {
     "id": "g15-202610",
     "game": "Genshin",
     "title": "Starlit Gala Phase 1 ends",
     "start": "2026-10-01",
     "end": "2026-10-22",
     "desc": "Official 7.1 calendar confirmed. Phase 1 only (not the Phase 2 web event). x20 reward icon.",
-    "type": "event"
-  },
-  {
-    "id": "g16-202610",
-    "game": "Genshin",
-    "title": "Predictive Victory Dynamics ends",
-    "start": "2026-10-12",
-    "end": "2026-10-20",
-    "desc": "Official 7.1 calendar confirmed. x420 reward icon.",
     "type": "event"
   },
   {
@@ -115,14 +89,6 @@
     "type": "event"
   },
   {
-    "id": "w15-202610",
-    "game": "WWM",
-    "title": "Lucky Turtle Match ends",
-    "start": "2026-09-16",
-    "end": "2026-10-16",
-    "desc": "Confirmed from official post: ends Oct 15 04:59 UTC (12:59 PM Manila). Lotus Pond event: pray and match lucky turtles."
-  },
-  {
     "id": "po1-202610",
     "game": "Pokopia",
     "title": "Pumpkaboo's Sweet Surprises ends",
@@ -137,5 +103,53 @@
     "start": "2026-10-13",
     "end": "2026-11-04",
     "desc": "Halloween event, runs three weeks from Oct 13. End date estimated, check in-game timer."
+  },
+  {
+    "id": "w16-202610",
+    "game": "WWM",
+    "title": "Qingzhou Opening Month ends (verify)",
+    "start": "2026-10-15",
+    "end": "2026-11-15",
+    "desc": "2.3 update event, Oct 15 to Nov 14. Dates from a Game8-style 2.3 overview, verify in the in-game Events tab."
+  },
+  {
+    "id": "w17-202610",
+    "game": "WWM",
+    "title": "Exam Showdown ends (verify)",
+    "start": "2026-10-15",
+    "end": "2026-11-15",
+    "desc": "2.3 update event, Oct 15 to Nov 14. Dates from a Game8-style 2.3 overview, verify in the in-game Events tab."
+  },
+  {
+    "id": "w18-202610",
+    "game": "WWM",
+    "title": "New Armament Drill ends (verify)",
+    "start": "2026-10-15",
+    "end": "2026-10-30",
+    "desc": "2.3 update event, Oct 15 to Oct 29. Dates from a Game8-style 2.3 overview, verify in the in-game Events tab."
+  },
+  {
+    "id": "w19-202610",
+    "game": "WWM",
+    "title": "Bubble Party ends (verify)",
+    "start": "2026-10-22",
+    "end": "2026-11-15",
+    "desc": "Starts Oct 22, ends Nov 14. Dates from a Game8-style 2.3 overview, verify in the in-game Events tab."
+  },
+  {
+    "id": "w20-202610",
+    "game": "WWM",
+    "title": "Merchant's Way ends (verify)",
+    "start": "2026-10-22",
+    "end": "2026-11-15",
+    "desc": "Starts Oct 22, ends Nov 14. Dates from a Game8-style 2.3 overview, verify in the in-game Events tab."
+  },
+  {
+    "id": "o3-202610",
+    "game": "Outlast",
+    "title": "Escape the Facility (end date unknown, verify)",
+    "start": "2026-10-20",
+    "end": "2026-11-17",
+    "desc": "New community event, started Oct 20. Objectives and rewards not announced. End date is a placeholder (4 weeks), check the in-game timer."
   }
 ]
