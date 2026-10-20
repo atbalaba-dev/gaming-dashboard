@@ -148,8 +148,16 @@
     "id": "o3-202610",
     "game": "Outlast",
     "title": "Escape the Facility (end date unknown, verify)",
-    "start": "2026-10-20",
+    "start": "2026-10-21",
     "end": "2026-11-17",
-    "desc": "New community event, started Oct 20. Objectives and rewards not announced. End date is a placeholder (4 weeks), check the in-game timer."
+    "desc": "New community event, starts after the Chemical Leak ends (Oct 20 10 AM ET, which is 10 PM Manila). Objectives and rewards not announced. End date is a placeholder (4 weeks), check the in-game timer. Outlast times are US/Canada ET."
+  },
+  {
+    "id": "o2-202609",
+    "game": "Outlast",
+    "title": "Chemical Leak ends tonight",
+    "start": "2026-09-08",
+    "end": "2026-10-21",
+    "desc": "Extended past Oct 6. In-game timer showed about 10 hours left on Oct 20 midday, ends 10 AM ET Oct 20 (10 PM Manila). Spend Event Tokens before then, catalog closes and tokens are forfeited."
   }
 ]
