@@ -107,42 +107,34 @@
   {
     "id": "w16-202610",
     "game": "WWM",
-    "title": "Qingzhou Opening Month ends (verify)",
+    "title": "Qingzhou Opening Month ends",
     "start": "2026-10-15",
-    "end": "2026-11-15",
-    "desc": "2.3 update event, Oct 15 to Nov 14. Dates from a Game8-style 2.3 overview, verify in the in-game Events tab."
+    "end": "2026-11-14",
+    "desc": "Confirmed in-game Oct 20 22:10 Manila: 24d 6h left, so it ends around 4-5 AM Nov 14 (last active day Nov 13)."
   },
   {
     "id": "w17-202610",
     "game": "WWM",
-    "title": "Exam Showdown ends (verify)",
+    "title": "Exam Showdown ends",
     "start": "2026-10-15",
-    "end": "2026-11-15",
-    "desc": "2.3 update event, Oct 15 to Nov 14. Dates from a Game8-style 2.3 overview, verify in the in-game Events tab."
-  },
-  {
-    "id": "w18-202610",
-    "game": "WWM",
-    "title": "New Armament Drill ends (verify)",
-    "start": "2026-10-15",
-    "end": "2026-10-30",
-    "desc": "2.3 update event, Oct 15 to Oct 29. Dates from a Game8-style 2.3 overview, verify in the in-game Events tab."
+    "end": "2026-11-14",
+    "desc": "Confirmed in-game Oct 20 22:10 Manila: 24d 6h left, so it ends around 4-5 AM Nov 14 (last active day Nov 13)."
   },
   {
     "id": "w19-202610",
     "game": "WWM",
     "title": "Bubble Party ends (verify)",
     "start": "2026-10-22",
-    "end": "2026-11-15",
-    "desc": "Starts Oct 22, ends Nov 14. Dates from a Game8-style 2.3 overview, verify in the in-game Events tab."
+    "end": "2026-11-14",
+    "desc": "Starts Oct 22. End estimated to match the other 2.3 events (about 5 AM Nov 14 Manila), verify once live."
   },
   {
     "id": "w20-202610",
     "game": "WWM",
     "title": "Merchant's Way ends (verify)",
     "start": "2026-10-22",
-    "end": "2026-11-15",
-    "desc": "Starts Oct 22, ends Nov 14. Dates from a Game8-style 2.3 overview, verify in the in-game Events tab."
+    "end": "2026-11-14",
+    "desc": "Starts Oct 22. End estimated to match the other 2.3 events (about 5 AM Nov 14 Manila), verify once live."
   },
   {
     "id": "o3-202610",
