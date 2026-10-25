@@ -264,19 +264,46 @@
   {
     "id": "wb1-202611",
     "game": "WWM",
-    "title": "Wraithflame draw set",
+    "title": "Wraithflame outfit",
     "start": "2026-11-01",
-    "end": "2027-02-02",
-    "desc": "Limited draw set, Nov 1 00:00 to Feb 1 2027 04:59:59 (UTC+8), from the official post. Last week to pull is Jan 25 to Jan 31.",
+    "end": "2027-02-01",
+    "desc": "Limited outfit, Nov 1 00:00 to Feb 1 2027 04:59:59 (UTC+8) per the official post, so the last day is Jan 31. Last week check: Jan 25.",
     "type": "banner"
   },
   {
     "id": "wb2-202609",
     "game": "WWM",
-    "title": "Penglai's Peaks draw set (verify)",
+    "title": "Penglai's Peaks outfit (exchange only)",
     "start": "2026-09-27",
     "end": "2026-12-26",
-    "desc": "Sold in the Draw Shop for 2 Harmonic Cores until Dec 26 5:00 AM (Game8, based on CN server dates, verify in-game).",
+    "desc": "In-game timer on Oct 26 07:19 Manila. WWM items end about 5 AM, verify. Showed 60d, so it ends about Dec 26 5 AM (last day Dec 25). Last week check: Dec 18.",
+    "type": "banner"
+  },
+  {
+    "id": "wb3-202610",
+    "game": "WWM",
+    "title": "Veil of Lotus outfit",
+    "start": "2026-10-26",
+    "end": "2027-01-13",
+    "desc": "In-game timer on Oct 26 07:19 Manila. WWM items end about 5 AM, verify. Showed 78d, so it ends about Jan 13 5 AM (last day Jan 12). Not exchange only, comes from the draw. Start date unknown. Last week check: Jan 5.",
+    "type": "banner"
+  },
+  {
+    "id": "wb4-202610",
+    "game": "WWM",
+    "title": "Bane of Life outfit (exchange only)",
+    "start": "2026-10-26",
+    "end": "2026-12-15",
+    "desc": "In-game timer on Oct 26 07:19 Manila. WWM items end about 5 AM, verify. Showed 49d, so it ends about Dec 15 5 AM (last day Dec 14). Start date unknown. Last week check: Dec 8.",
+    "type": "banner"
+  },
+  {
+    "id": "wb5-202610",
+    "game": "WWM",
+    "title": "Forged in Fire outfit (exchange only)",
+    "start": "2026-10-26",
+    "end": "2026-12-02",
+    "desc": "In-game timer on Oct 26 07:19 Manila. WWM items end about 5 AM, verify. Showed 36d, so it ends about Dec 2 5 AM (last day Dec 1). Start date unknown. Last week check: Nov 25.",
     "type": "banner"
   }
 ]
