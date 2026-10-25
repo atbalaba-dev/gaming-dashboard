@@ -18,15 +18,6 @@
     "type": "event"
   },
   {
-    "id": "g15-202610",
-    "game": "Genshin",
-    "title": "Starlit Gala Phase 1 ends",
-    "start": "2026-10-01",
-    "end": "2026-10-22",
-    "desc": "Official 7.1 calendar confirmed. Phase 1 only (not the Phase 2 web event). x20 reward icon.",
-    "type": "event"
-  },
-  {
     "id": "g17-202610",
     "game": "Genshin",
     "title": "Carefree Snowball Fight ends",
@@ -123,33 +114,25 @@
   {
     "id": "w19-202610",
     "game": "WWM",
-    "title": "Bubble Party ends (verify)",
+    "title": "Bubble Party ends",
     "start": "2026-10-22",
     "end": "2026-11-14",
-    "desc": "Starts Oct 22. End estimated to match the other 2.3 events (about 5 AM Nov 14 Manila), verify once live."
+    "desc": "Confirmed in-game Oct 26 06:47 Manila: 18d 22h left, ends about 5-6 AM Nov 14 (last active day Nov 13)."
   },
   {
     "id": "w20-202610",
     "game": "WWM",
-    "title": "Merchant's Way ends (verify)",
+    "title": "Merchant's Way ends",
     "start": "2026-10-22",
     "end": "2026-11-14",
-    "desc": "Starts Oct 22. End estimated to match the other 2.3 events (about 5 AM Nov 14 Manila), verify once live."
+    "desc": "Confirmed in-game Oct 26 06:47 Manila: 18d 22h left, ends about 5-6 AM Nov 14 (last active day Nov 13)."
   },
   {
     "id": "o3-202610",
     "game": "Outlast",
-    "title": "Escape the Facility (end date unknown, verify)",
+    "title": "Escape the Facility ends",
     "start": "2026-10-21",
-    "end": "2026-11-17",
-    "desc": "New community event, starts after the Chemical Leak ends (Oct 20 10 AM ET, which is 10 PM Manila). Objectives and rewards not announced. End date is a placeholder (4 weeks), check the in-game timer. Outlast times are US/Canada ET."
-  },
-  {
-    "id": "o2-202609",
-    "game": "Outlast",
-    "title": "Chemical Leak ends tonight",
-    "start": "2026-09-08",
-    "end": "2026-10-21",
-    "desc": "Extended past Oct 6. In-game timer showed about 10 hours left on Oct 20 midday, ends 10 AM ET Oct 20 (10 PM Manila). Spend Event Tokens before then, catalog closes and tokens are forfeited."
+    "end": "2026-12-09",
+    "desc": "Community event. Confirmed in-game Oct 26 06:47 Manila: 43 days left, so it ends Dec 8 (about 10-11 PM Manila, Outlast uses ET). Objectives and rewards not announced."
   }
 ]
