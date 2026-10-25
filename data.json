@@ -218,7 +218,7 @@
   },
   {
     "id": "gb1-202611",
-    "game": "Genshin",
+    "game": "Genshin (Gacha Banner)",
     "title": "Skirk and Escoffier banners end",
     "start": "2026-10-13",
     "end": "2026-11-04",
@@ -227,7 +227,7 @@
   },
   {
     "id": "gb2-202611",
-    "game": "Genshin",
+    "game": "Genshin (Gacha Banner)",
     "title": "Mitya banner (new 5-star)",
     "start": "2026-11-04",
     "end": "2026-11-25",
@@ -236,7 +236,7 @@
   },
   {
     "id": "gb3-202611",
-    "game": "Genshin",
+    "game": "Genshin (Gacha Banner)",
     "title": "Furina banner (rerun)",
     "start": "2026-11-04",
     "end": "2026-11-25",
@@ -245,7 +245,7 @@
   },
   {
     "id": "gb4-202611",
-    "game": "Genshin",
+    "game": "Genshin (Gacha Banner)",
     "title": "Zibai banner (rerun)",
     "start": "2026-11-24",
     "end": "2026-12-16",
@@ -254,7 +254,7 @@
   },
   {
     "id": "gb5-202611",
-    "game": "Genshin",
+    "game": "Genshin (Gacha Banner)",
     "title": "Linnea banner (rerun)",
     "start": "2026-11-24",
     "end": "2026-12-16",
@@ -263,7 +263,7 @@
   },
   {
     "id": "wb1-202611",
-    "game": "WWM",
+    "game": "WWM (Gacha Outfit)",
     "title": "Wraithflame outfit",
     "start": "2026-11-01",
     "end": "2027-02-01",
@@ -272,7 +272,7 @@
   },
   {
     "id": "wb2-202609",
-    "game": "WWM",
+    "game": "WWM (Gacha Outfit)",
     "title": "Penglai's Peaks outfit (exchange only)",
     "start": "2026-09-27",
     "end": "2026-12-26",
@@ -281,7 +281,7 @@
   },
   {
     "id": "wb3-202610",
-    "game": "WWM",
+    "game": "WWM (Gacha Outfit)",
     "title": "Veil of Lotus outfit",
     "start": "2026-10-26",
     "end": "2027-01-13",
@@ -290,7 +290,7 @@
   },
   {
     "id": "wb4-202610",
-    "game": "WWM",
+    "game": "WWM (Gacha Outfit)",
     "title": "Bane of Life outfit (exchange only)",
     "start": "2026-10-26",
     "end": "2026-12-15",
@@ -299,7 +299,7 @@
   },
   {
     "id": "wb5-202610",
-    "game": "WWM",
+    "game": "WWM (Gacha Outfit)",
     "title": "Forged in Fire outfit (exchange only)",
     "start": "2026-10-26",
     "end": "2026-12-02",

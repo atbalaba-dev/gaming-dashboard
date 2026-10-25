@@ -288,7 +288,9 @@
       <label>Game</label>
       <select id="f-game">
         <option value="Genshin">Genshin Impact</option>
+        <option value="Genshin (Gacha Banner)">Genshin (Gacha Banner)</option>
         <option value="WWM">Where Winds Meet</option>
+        <option value="WWM (Gacha Outfit)">WWM (Gacha Outfit)</option>
         <option value="Pokopia">Pokopia</option>
         <option value="MH Wilds">MH Wilds</option>
         <option value="DBD">Dead by Daylight</option>
@@ -322,7 +324,9 @@
 <script>
 var COLORS = {
   "Genshin": "var(--genshin)",
+  "Genshin (Gacha Banner)": "var(--genshin)",
   "WWM": "var(--wwm)",
+  "WWM (Gacha Outfit)": "var(--wwm)",
   "Pokopia": "var(--pokopia)",
   "MH Wilds": "var(--mhwilds)",
   "DBD": "var(--dbd)",
@@ -409,7 +413,7 @@ function renderArchive() {
     byGame[item.game].push(item);
   });
 
-  var GAME_PRIORITY = ["Genshin", "WWM", "DBD", "Outlast", "Pokopia", "MH Wilds", "Backlog"];
+  var GAME_PRIORITY = ["Genshin", "Genshin (Gacha Banner)", "WWM", "WWM (Gacha Outfit)", "DBD", "Outlast", "Pokopia", "MH Wilds", "Backlog"];
   var games = Object.keys(byGame).sort(function(a, b) {
     var pa = GAME_PRIORITY.indexOf(a); if (pa === -1) pa = GAME_PRIORITY.length;
     var pb = GAME_PRIORITY.indexOf(b); if (pb === -1) pb = GAME_PRIORITY.length;
@@ -500,7 +504,7 @@ function renderTimeline() {
 
   document.getElementById('month-label').textContent = monthStart.toLocaleDateString(undefined, { month: 'long', year: 'numeric' });
 
-  var GAME_PRIORITY = ["Genshin", "WWM", "DBD", "Outlast", "Pokopia", "MH Wilds", "Backlog"];
+  var GAME_PRIORITY = ["Genshin", "Genshin (Gacha Banner)", "WWM", "WWM (Gacha Outfit)", "DBD", "Outlast", "Pokopia", "MH Wilds", "Backlog"];
 
   var events = getMergedEvents().filter(function(ev) {
     return new Date(ev.end) >= monthStart && new Date(ev.start) <= monthEnd;
