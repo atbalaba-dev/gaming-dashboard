@@ -134,5 +134,149 @@
     "start": "2026-10-21",
     "end": "2026-12-09",
     "desc": "Community event. Confirmed in-game Oct 26 06:47 Manila: 43 days left, so it ends Dec 8 (about 10-11 PM Manila, Outlast uses ET). Objectives and rewards not announced."
+  },
+  {
+    "id": "g22-202611",
+    "game": "Genshin",
+    "title": "The Grand Defense: Defy the Unjust Judgment ends",
+    "start": "2026-11-04",
+    "end": "2026-12-17",
+    "desc": "7.2 main event, x920 reward icon. From the official 7.2 event calendar (dates in Manila time).",
+    "type": "event"
+  },
+  {
+    "id": "g23-202611",
+    "game": "Genshin",
+    "title": "Keep Up With Mitya! ends",
+    "start": "2026-11-04",
+    "end": "2026-11-13",
+    "desc": "Community event. From the official 7.2 event calendar (dates in Manila time).",
+    "type": "event"
+  },
+  {
+    "id": "g24-202611",
+    "game": "Genshin",
+    "title": "Trial of the Usurper ends",
+    "start": "2026-11-16",
+    "end": "2026-11-27",
+    "desc": "Community event, x40 reward icon. From the official 7.2 event calendar (dates in Manila time).",
+    "type": "event"
+  },
+  {
+    "id": "g25-202611",
+    "game": "Genshin",
+    "title": "Stress Block Smashing Project ends",
+    "start": "2026-11-20",
+    "end": "2026-12-01",
+    "desc": "x420 reward icon. From the official 7.2 event calendar (dates in Manila time).",
+    "type": "event"
+  },
+  {
+    "id": "g26-202611",
+    "game": "Genshin",
+    "title": "Frames of Fierce Splendor ends",
+    "start": "2026-11-27",
+    "end": "2026-12-08",
+    "desc": "x420 reward icon. From the official 7.2 event calendar (dates in Manila time).",
+    "type": "event"
+  },
+  {
+    "id": "g27-202612",
+    "game": "Genshin",
+    "title": "Ley Line Overflow ends",
+    "start": "2026-12-07",
+    "end": "2026-12-15",
+    "desc": "Double rewards event. From the official 7.2 event calendar (dates in Manila time).",
+    "type": "event"
+  },
+  {
+    "id": "g19-202611",
+    "game": "Genshin",
+    "title": "Stygian Onslaught - Disturbance Outbreak",
+    "start": "2026-11-11",
+    "end": "2026-11-21",
+    "desc": "Only the first 10 days matter (Dire Prestige rewards). Pattern-based, verify in-game once live.",
+    "type": "event"
+  },
+  {
+    "id": "g4b-202611",
+    "game": "Genshin",
+    "title": "Imaginarium Theater - monthly reset",
+    "start": "2026-11-01",
+    "end": "2026-12-01",
+    "desc": "Resets monthly on the 1st. Your usual pace: start ~3-4 days after reset.",
+    "type": "cycle"
+  },
+  {
+    "id": "g4a-202612",
+    "game": "Genshin",
+    "title": "Spiral Abyss - monthly reset",
+    "start": "2026-11-16",
+    "end": "2026-12-16",
+    "desc": "Resets monthly on the 16th. Your usual pace: start ~3-4 days after reset.",
+    "type": "cycle"
+  },
+  {
+    "id": "gb1-202611",
+    "game": "Genshin",
+    "title": "Skirk and Escoffier banners end",
+    "start": "2026-10-13",
+    "end": "2026-11-04",
+    "desc": "7.1 Phase 2 character banners (Skirk, Escoffier). Banner dates from Game8, times not listed, verify in-game. ",
+    "type": "banner"
+  },
+  {
+    "id": "gb2-202611",
+    "game": "Genshin",
+    "title": "Mitya banner (new 5-star)",
+    "start": "2026-11-04",
+    "end": "2026-11-25",
+    "desc": "7.2 Phase 1, 'Myriad Patterns Unfold'. 4-star Valeriy. Banner dates from Game8, times not listed, verify in-game. ",
+    "type": "banner"
+  },
+  {
+    "id": "gb3-202611",
+    "game": "Genshin",
+    "title": "Furina banner (rerun)",
+    "start": "2026-11-04",
+    "end": "2026-11-25",
+    "desc": "7.2 Phase 1, 'Chanson of Many Waters'. 4-star Valeriy. Banner dates from Game8, times not listed, verify in-game. ",
+    "type": "banner"
+  },
+  {
+    "id": "gb4-202611",
+    "game": "Genshin",
+    "title": "Zibai banner (rerun)",
+    "start": "2026-11-24",
+    "end": "2026-12-16",
+    "desc": "7.2 Phase 2, 'Harmonious Abundance'. Banner dates from Game8, times not listed, verify in-game. ",
+    "type": "banner"
+  },
+  {
+    "id": "gb5-202611",
+    "game": "Genshin",
+    "title": "Linnea banner (rerun)",
+    "start": "2026-11-24",
+    "end": "2026-12-16",
+    "desc": "7.2 Phase 2, 'Ya-hoho! Compendium'. Banner dates from Game8, times not listed, verify in-game. ",
+    "type": "banner"
+  },
+  {
+    "id": "wb1-202611",
+    "game": "WWM",
+    "title": "Wraithflame draw set",
+    "start": "2026-11-01",
+    "end": "2027-02-02",
+    "desc": "Limited draw set, Nov 1 00:00 to Feb 1 2027 04:59:59 (UTC+8), from the official post. Last week to pull is Jan 25 to Jan 31.",
+    "type": "banner"
+  },
+  {
+    "id": "wb2-202609",
+    "game": "WWM",
+    "title": "Penglai's Peaks draw set (verify)",
+    "start": "2026-09-27",
+    "end": "2026-12-26",
+    "desc": "Sold in the Draw Shop for 2 Harmonic Cores until Dec 26 5:00 AM (Game8, based on CN server dates, verify in-game).",
+    "type": "banner"
   }
 ]

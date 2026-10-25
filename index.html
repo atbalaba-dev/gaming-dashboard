@@ -104,6 +104,7 @@
   }
   .type-cycle { color: var(--text-dim); }
   .type-event { color: var(--text-faint); }
+  .type-banner { color: var(--text-dim); }
   .days-left {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 12px;
@@ -472,7 +473,7 @@ function renderList() {
     var color = COLORS[ev.game] || 'var(--backlog)';
     var isLocal = !!localOverrides[ev.id];
     var daysLabel = ended ? 'ended' : (daysLeft === 0 ? 'ends today' : daysLeft + 'd left');
-    var typeLabel = ev.type === 'cycle' ? '<span class="type-badge type-cycle">Cycle</span>' : (ev.type === 'event' ? '<span class="type-badge type-event">Event</span>' : '');
+    var typeLabel = ev.type === 'banner' ? '<span class="type-badge type-banner">Banner</span>' : ev.type === 'cycle' ? '<span class="type-badge type-cycle">Cycle</span>' : (ev.type === 'event' ? '<span class="type-badge type-event">Event</span>' : '');
 
     return '<div class="card ' + (ended ? 'ended' : '') + '">'
       + '<div class="card-top">'
