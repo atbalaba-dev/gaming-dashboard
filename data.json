@@ -41,7 +41,8 @@
     "title": "Festival of Accord: Dreamspell ends",
     "start": "2026-09-22",
     "end": "2026-11-04",
-    "desc": "Halloween festival, already live per Capcom's post (live until Nov 3, 5:59pm PT, so early Nov 4 in Manila). Start date is approximate, check the in-game timer. Note whether you already own the rewards from the earlier runs."
+    "desc": "Halloween festival, already live per Capcom's post (live until Nov 3, 5:59pm PT, so early Nov 4 in Manila). Start date is approximate, check the in-game timer. Note whether you already own the rewards from the earlier runs.",
+    "type": "event"
   },
   {
     "id": "g4b-202610",
@@ -85,7 +86,8 @@
     "title": "Pumpkaboo's Sweet Surprises ends",
     "start": "2026-10-17",
     "end": "2026-11-02",
-    "desc": "Halloween Pokemon event, Oct 17 to Nov 1 per Serebii."
+    "desc": "Halloween Pokemon event, Oct 17 to Nov 1 per Serebii.",
+    "type": "event"
   },
   {
     "id": "d5-202610",
@@ -93,7 +95,8 @@
     "title": "Haunted by Daylight ends (estimated, verify)",
     "start": "2026-10-13",
     "end": "2026-11-04",
-    "desc": "Halloween event, runs three weeks from Oct 13. End date estimated, check in-game timer."
+    "desc": "Halloween event, runs three weeks from Oct 13. End date estimated, check in-game timer.",
+    "type": "event"
   },
   {
     "id": "w16-202610",
@@ -101,7 +104,8 @@
     "title": "Qingzhou Opening Month ends",
     "start": "2026-10-15",
     "end": "2026-11-14",
-    "desc": "Confirmed in-game Oct 20 22:10 Manila: 24d 6h left, so it ends around 4-5 AM Nov 14 (last active day Nov 13)."
+    "desc": "Confirmed in-game Oct 20 22:10 Manila: 24d 6h left, so it ends around 4-5 AM Nov 14 (last active day Nov 13).",
+    "type": "event"
   },
   {
     "id": "w17-202610",
@@ -109,7 +113,8 @@
     "title": "Exam Showdown ends",
     "start": "2026-10-15",
     "end": "2026-11-14",
-    "desc": "Confirmed in-game Oct 20 22:10 Manila: 24d 6h left, so it ends around 4-5 AM Nov 14 (last active day Nov 13)."
+    "desc": "Confirmed in-game Oct 20 22:10 Manila: 24d 6h left, so it ends around 4-5 AM Nov 14 (last active day Nov 13).",
+    "type": "event"
   },
   {
     "id": "w19-202610",
@@ -117,7 +122,8 @@
     "title": "Bubble Party ends",
     "start": "2026-10-22",
     "end": "2026-11-14",
-    "desc": "Confirmed in-game Oct 26 06:47 Manila: 18d 22h left, ends about 5-6 AM Nov 14 (last active day Nov 13)."
+    "desc": "Confirmed in-game Oct 26 06:47 Manila: 18d 22h left, ends about 5-6 AM Nov 14 (last active day Nov 13).",
+    "type": "event"
   },
   {
     "id": "w20-202610",
@@ -125,7 +131,8 @@
     "title": "Merchant's Way ends",
     "start": "2026-10-22",
     "end": "2026-11-14",
-    "desc": "Confirmed in-game Oct 26 06:47 Manila: 18d 22h left, ends about 5-6 AM Nov 14 (last active day Nov 13)."
+    "desc": "Confirmed in-game Oct 26 06:47 Manila: 18d 22h left, ends about 5-6 AM Nov 14 (last active day Nov 13).",
+    "type": "event"
   },
   {
     "id": "o3-202610",
@@ -133,7 +140,8 @@
     "title": "Escape the Facility ends",
     "start": "2026-10-21",
     "end": "2026-12-09",
-    "desc": "Community event. Confirmed in-game Oct 26 06:47 Manila: 43 days left, so it ends Dec 8 (about 10-11 PM Manila, Outlast uses ET). Objectives and rewards not announced."
+    "desc": "Community event. Confirmed in-game Oct 26 06:47 Manila: 43 days left, so it ends Dec 8 (about 10-11 PM Manila, Outlast uses ET). Objectives and rewards not announced.",
+    "type": "event"
   },
   {
     "id": "g22-202611",

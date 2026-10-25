@@ -105,6 +105,10 @@
   .type-cycle { color: var(--text-dim); }
   .type-event { color: var(--text-faint); }
   .type-banner { color: var(--text-dim); }
+  .sort-row { display: flex; align-items: center; gap: 6px; margin-bottom: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--text-faint); }
+  .sort-btn { font: inherit; background: none; border: 1px solid var(--line); color: var(--text-dim); border-radius: 999px; padding: 3px 10px; cursor: pointer; }
+  .sort-btn.active { color: var(--text); border-color: var(--text-dim); }
+  .group-head { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); margin: 18px 0 8px; }
   .days-left {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 12px;
@@ -262,6 +266,10 @@
   </div>
 
   <div id="view-list" class="view active">
+    <div class="sort-row"><span>Sort</span>
+      <button class="sort-btn" id="sort-date" onclick="setSort('date')">End date</button>
+      <button class="sort-btn" id="sort-tag" onclick="setSort('tag')">Tag</button>
+    </div>
     <div id="list"></div>
   </div>
 
@@ -451,17 +459,34 @@ function restoreEvent(id) {
   renderAll();
 }
 
+function getSortMode() {
+  try { return localStorage.getItem('gc_sort') === 'tag' ? 'tag' : 'date'; } catch (e) { return 'date'; }
+}
+function setSort(mode) {
+  try { localStorage.setItem('gc_sort', mode); } catch (e) {}
+  renderList();
+}
+
 function renderList() {
   var list = document.getElementById('list');
   var today = todayStr();
   var events = getMergedEvents();
 
+  var TAG_ORDER = ['event', 'cycle', 'banner'];
+  function tagRank(ev) { var i = TAG_ORDER.indexOf(ev.type); return i === -1 ? TAG_ORDER.length : i; }
+  var sortMode = getSortMode();
+  document.getElementById('sort-date').classList.toggle('active', sortMode === 'date');
+  document.getElementById('sort-tag').classList.toggle('active', sortMode === 'tag');
+
   var sorted = events.slice().sort(function(a, b) {
     var aEnded = a.end < today ? 1 : 0;
     var bEnded = b.end < today ? 1 : 0;
     if (aEnded !== bEnded) return aEnded - bEnded;
+    if (sortMode === 'tag' && tagRank(a) !== tagRank(b)) return tagRank(a) - tagRank(b);
     return new Date(a.end) - new Date(b.end);
   });
+  var HEAD = { event: 'Events', cycle: 'Cycles', banner: 'Gacha banners' };
+  var lastHead = null;
 
   if (sorted.length === 0) {
     list.innerHTML = '<div class="empty">No events tracked yet. Add one above.</div>';
@@ -469,6 +494,11 @@ function renderList() {
   }
 
   list.innerHTML = sorted.map(function(ev) {
+    var headHtml = '';
+    if (sortMode === 'tag') {
+      var headKey = (ev.end < today) ? 'ended' : (HEAD[ev.type] || 'Other');
+      if (headKey !== lastHead) { lastHead = headKey; headHtml = '<div class="group-head">' + (headKey === 'ended' ? 'Ended' : headKey) + '</div>'; }
+    }
     var totalDays = Math.max(1, daysBetween(ev.start, ev.end));
     var elapsed = daysBetween(ev.start, today);
     var pct = Math.max(0, Math.min(100, Math.round((elapsed / totalDays) * 100)));
@@ -479,7 +509,7 @@ function renderList() {
     var daysLabel = ended ? 'ended' : (daysLeft === 0 ? 'ends today' : daysLeft + 'd left');
     var typeLabel = ev.type === 'banner' ? '<span class="type-badge type-banner">Banner</span>' : ev.type === 'cycle' ? '<span class="type-badge type-cycle">Cycle</span>' : (ev.type === 'event' ? '<span class="type-badge type-event">Event</span>' : '');
 
-    return '<div class="card ' + (ended ? 'ended' : '') + '">'
+    return headHtml + '<div class="card ' + (ended ? 'ended' : '') + '">'
       + '<div class="card-top">'
       + '<div class="card-top-left"><span class="tag" style="background:' + color + '22;color:' + color + '">' + ev.game + '</span>'
       + typeLabel
