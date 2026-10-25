@@ -266,6 +266,12 @@
   </div>
 
   <div id="view-list" class="view active">
+    <div class="sort-row"><span>Show</span>
+      <button class="sort-btn" id="f-all" onclick="setFilter('all')">All</button>
+      <button class="sort-btn" id="f-event" onclick="setFilter('event')">Events</button>
+      <button class="sort-btn" id="f-cycle" onclick="setFilter('cycle')">Cycles</button>
+      <button class="sort-btn" id="f-banner" onclick="setFilter('banner')">Banners</button>
+    </div>
     <div class="sort-row"><span>Sort</span>
       <button class="sort-btn" id="sort-date" onclick="setSort('date')">End date</button>
       <button class="sort-btn" id="sort-tag" onclick="setSort('tag')">Tag</button>
@@ -462,6 +468,13 @@ function restoreEvent(id) {
 function getSortMode() {
   try { return localStorage.getItem('gc_sort') === 'tag' ? 'tag' : 'date'; } catch (e) { return 'date'; }
 }
+function getFilter() {
+  try { var f = localStorage.getItem('gc_filter'); return ['event','cycle','banner'].indexOf(f) === -1 ? 'all' : f; } catch (e) { return 'all'; }
+}
+function setFilter(f) {
+  try { localStorage.setItem('gc_filter', f); } catch (e) {}
+  renderList();
+}
 function setSort(mode) {
   try { localStorage.setItem('gc_sort', mode); } catch (e) {}
   renderList();
@@ -470,7 +483,15 @@ function setSort(mode) {
 function renderList() {
   var list = document.getElementById('list');
   var today = todayStr();
-  var events = getMergedEvents();
+  var allEvents = getMergedEvents();
+  var filterMode = getFilter();
+  ['all','event','cycle','banner'].forEach(function(k) {
+    var n = allEvents.filter(function(e) { return e.end >= today && (k === 'all' || e.type === k); }).length;
+    var btn = document.getElementById('f-' + k);
+    btn.textContent = { all: 'All', event: 'Events', cycle: 'Cycles', banner: 'Banners' }[k] + ' ' + n;
+    btn.classList.toggle('active', filterMode === k);
+  });
+  var events = allEvents.filter(function(e) { return filterMode === 'all' || e.type === filterMode; });
 
   var TAG_ORDER = ['event', 'cycle', 'banner'];
   function tagRank(ev) { var i = TAG_ORDER.indexOf(ev.type); return i === -1 ? TAG_ORDER.length : i; }
@@ -489,13 +510,13 @@ function renderList() {
   var lastHead = null;
 
   if (sorted.length === 0) {
-    list.innerHTML = '<div class="empty">No events tracked yet. Add one above.</div>';
+    list.innerHTML = '<div class="empty">' + (filterMode === 'all' ? 'No events tracked yet. Add one above.' : 'Nothing with this tag right now.') + '</div>';
     return;
   }
 
   list.innerHTML = sorted.map(function(ev) {
     var headHtml = '';
-    if (sortMode === 'tag') {
+    if (sortMode === 'tag' && filterMode === 'all') {
       var headKey = (ev.end < today) ? 'ended' : (HEAD[ev.type] || 'Other');
       if (headKey !== lastHead) { lastHead = headKey; headHtml = '<div class="group-head">' + (headKey === 'ended' ? 'Ended' : headKey) + '</div>'; }
     }
