@@ -1,59 +1,5 @@
 [
   {
-    "id": "g10-202608",
-    "game": "Genshin",
-    "title": "The Godforsaken Frostlands ends",
-    "start": "2026-08-12",
-    "end": "2026-11-03",
-    "desc": "MISSED IN ORIGINAL RESEARCH - found during Sep 13 check. Exploration event across 5 new Snezhnaya areas (Volkodlak Tundra, Everfrozen Earth, Fellfrost Peak, Flamefeather Valley, White Birch Snowgrave). Reach 80% exploration in each for 400 Primogems total. Crosses version boundary, no rush.",
-    "type": "event"
-  },
-  {
-    "id": "g12-202609",
-    "game": "Genshin",
-    "title": "Free event-limited 5-star (finish Snezhnaya Ch. IV by Nov 3)",
-    "start": "2026-09-23",
-    "end": "2026-11-03",
-    "desc": "CONFIRMED: complete Chapter IV of the Snezhnaya Archon Quest by Nov 3, 2026 to claim a free event-limited 5-star character. Real deadline, don't miss.",
-    "type": "event"
-  },
-  {
-    "id": "g17-202610",
-    "game": "Genshin",
-    "title": "Carefree Snowball Fight ends",
-    "start": "2026-10-21",
-    "end": "2026-11-02",
-    "desc": "Official 7.1 calendar confirmed. x420 reward icon.",
-    "type": "event"
-  },
-  {
-    "id": "g18-202610",
-    "game": "Genshin",
-    "title": "Overflowing Favor ends",
-    "start": "2026-10-26",
-    "end": "2026-11-02",
-    "desc": "Official 7.1 calendar confirmed. x420 reward icon. Different from Overflowing Abundance (Sep event).",
-    "type": "event"
-  },
-  {
-    "id": "m2-202609",
-    "game": "MH Wilds",
-    "title": "Festival of Accord: Dreamspell ends",
-    "start": "2026-09-22",
-    "end": "2026-11-04",
-    "desc": "Halloween festival, already live per Capcom's post (live until Nov 3, 5:59pm PT, so early Nov 4 in Manila). Start date is approximate, check the in-game timer. Note whether you already own the rewards from the earlier runs.",
-    "type": "event"
-  },
-  {
-    "id": "g4b-202610",
-    "game": "Genshin",
-    "title": "Imaginarium Theater - monthly reset",
-    "start": "2026-10-01",
-    "end": "2026-11-01",
-    "desc": "Hydro/Cryo/Anemo required. Opening chars: Neuvillette, Barbara, Citlali, Kaeya, Wanderer, Prune. Your usual pace: start ~3-4 days after reset.",
-    "type": "cycle"
-  },
-  {
     "id": "g4a-202611",
     "game": "Genshin",
     "title": "Spiral Abyss - monthly reset",
@@ -61,42 +7,6 @@
     "end": "2026-11-16",
     "desc": "Superconduct/Stellar-Conduct modifier. Resets monthly on the 16th. Your usual pace: start ~3-4 days after reset.",
     "type": "cycle"
-  },
-  {
-    "id": "g20-202610",
-    "game": "Genshin",
-    "title": "Tabletop Troupe: A Gathering on Adventure's Eve ends",
-    "start": "2026-09-23",
-    "end": "2026-11-04",
-    "desc": "7.1 limited-time event, ends Nov 3 2:59 PM Manila per genshin-builds timeline.",
-    "type": "event"
-  },
-  {
-    "id": "g21-202610",
-    "game": "Genshin",
-    "title": "Across the Frozen Wilds, Honing One's Edge ends",
-    "start": "2026-09-23",
-    "end": "2026-11-04",
-    "desc": "7.1 limited-time event, ends Nov 3 2:59 PM Manila per genshin-builds timeline.",
-    "type": "event"
-  },
-  {
-    "id": "po1-202610",
-    "game": "Pokopia",
-    "title": "Pumpkaboo's Sweet Surprises ends",
-    "start": "2026-10-17",
-    "end": "2026-11-02",
-    "desc": "Halloween Pokemon event, Oct 17 to Nov 1 per Serebii.",
-    "type": "event"
-  },
-  {
-    "id": "d5-202610",
-    "game": "DBD",
-    "title": "Haunted by Daylight ends (estimated, verify)",
-    "start": "2026-10-13",
-    "end": "2026-11-04",
-    "desc": "Halloween event, runs three weeks from Oct 13. End date estimated, check in-game timer.",
-    "type": "event"
   },
   {
     "id": "w16-202610",
@@ -203,7 +113,7 @@
     "title": "Stygian Onslaught - Disturbance Outbreak",
     "start": "2026-11-11",
     "end": "2026-11-21",
-    "desc": "Only the first 10 days matter (Dire Prestige rewards). Pattern-based, verify in-game once live.",
+    "desc": "Confirmed by the official 7.2 calendar: Stygian cycle runs Nov 11 to Dec 15. Only the first 10 days matter (Dire Prestige rewards), so the outbreak is Nov 11 to Nov 20.",
     "type": "event"
   },
   {
@@ -223,15 +133,6 @@
     "end": "2026-12-16",
     "desc": "Resets monthly on the 16th. Your usual pace: start ~3-4 days after reset.",
     "type": "cycle"
-  },
-  {
-    "id": "gb1-202611",
-    "game": "Genshin (Gacha Banner)",
-    "title": "Skirk and Escoffier banners end",
-    "start": "2026-10-13",
-    "end": "2026-11-04",
-    "desc": "7.1 Phase 2 character banners (Skirk, Escoffier). Banner dates from Game8, times not listed, verify in-game. ",
-    "type": "banner"
   },
   {
     "id": "gb2-202611",
@@ -312,6 +213,24 @@
     "start": "2026-10-26",
     "end": "2026-12-02",
     "desc": "In-game timer on Oct 26 07:19 Manila. WWM items end about 5 AM, verify. Showed 36d, so it ends about Dec 2 5 AM (last day Dec 1). Start date unknown. Last week check: Nov 25.",
+    "type": "banner"
+  },
+  {
+    "id": "gat-202611",
+    "game": "Genshin",
+    "title": "Artifact Transmuter - Sanctifying Elixir (7.2 cycle)",
+    "start": "2026-11-04",
+    "end": "2026-12-16",
+    "desc": "One extractable Sanctifying Elixir per version cycle. This cycle starts with 7.2 and resets with 7.3 (about Dec 16, verify in-game). Use it before then.",
+    "type": "cycle"
+  },
+  {
+    "id": "wb6-202611",
+    "game": "WWM (Gacha Outfit)",
+    "title": "Duskgem: Celestial Mirage and Petrichor Bloom (verify)",
+    "start": "2026-11-04",
+    "end": "2026-12-28",
+    "desc": "From a gamemarket.gg article: available until Dec 28 04:59:59 (UTC+8), so the last day is Dec 27. Not seen in your in-game list yet, check the outfit timer and whether it is gacha or shop. Last week check: Dec 21.",
     "type": "banner"
   }
 ]
