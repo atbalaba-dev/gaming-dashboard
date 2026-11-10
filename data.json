@@ -58,8 +58,8 @@
     "game": "Genshin",
     "title": "The Grand Defense: Defy the Unjust Judgment ends",
     "start": "2026-11-04",
-    "end": "2026-12-17",
-    "desc": "7.2 main event, x920 reward icon. From the official 7.2 event calendar (dates in Manila time).",
+    "end": "2026-12-16",
+    "desc": "7.2 main event, x920 reward icon. Genshin-builds timeline: ends Dec 16 5:59 AM Manila, so the last active day is Dec 15.",
     "type": "event"
   },
   {
@@ -232,5 +232,32 @@
     "end": "2026-12-28",
     "desc": "From a gamemarket.gg article: available until Dec 28 04:59:59 (UTC+8), so the last day is Dec 27. Not seen in your in-game list yet, check the outfit timer and whether it is gacha or shop. Last week check: Dec 21.",
     "type": "banner"
+  },
+  {
+    "id": "d6-202611",
+    "game": "DBD",
+    "title": "Lights Out: Stranger Things Edition ends (verify time)",
+    "start": "2026-11-05",
+    "end": "2026-11-13",
+    "desc": "Modifier event, Nov 5 to Nov 12 per dbdvault. DBD times are ET, so the end may land early Nov 13 Manila. Check the in-game timer.",
+    "type": "event"
+  },
+  {
+    "id": "p3-202611",
+    "game": "Pokopia",
+    "title": "Apples to Applin ends",
+    "start": "2026-11-16",
+    "end": "2026-12-01",
+    "desc": "Nov 16 5:00 AM to Dec 1 4:59 AM local, so the last day is Nov 30.",
+    "type": "event"
+  },
+  {
+    "id": "o4-202610",
+    "game": "Outlast",
+    "title": "Geister event ends (tokens forfeited)",
+    "start": "2026-10-21",
+    "end": "2026-12-09",
+    "desc": "Season 7.2 limited-time event. Spend Event Tokens in the Geister Catalog before Dec 8 10 AM ET (11 PM Manila). Unused tokens are forfeited. Start date is the patch date, verify.",
+    "type": "event"
   }
 ]
