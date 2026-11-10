@@ -225,15 +225,6 @@
     "type": "cycle"
   },
   {
-    "id": "wb6-202611",
-    "game": "WWM (Gacha Outfit)",
-    "title": "Duskgem: Celestial Mirage and Petrichor Bloom (verify)",
-    "start": "2026-11-04",
-    "end": "2026-12-28",
-    "desc": "From a gamemarket.gg article: available until Dec 28 04:59:59 (UTC+8), so the last day is Dec 27. Not seen in your in-game list yet, check the outfit timer and whether it is gacha or shop. Last week check: Dec 21.",
-    "type": "banner"
-  },
-  {
     "id": "d6-202611",
     "game": "DBD",
     "title": "Lights Out: Stranger Things Edition ends (verify time)",
@@ -258,6 +249,15 @@
     "start": "2026-10-21",
     "end": "2026-12-09",
     "desc": "Season 7.2 limited-time event. Spend Event Tokens in the Geister Catalog before Dec 8 10 AM ET (11 PM Manila). Unused tokens are forfeited. Start date is the patch date, verify.",
+    "type": "event"
+  },
+  {
+    "id": "w21-202611",
+    "game": "WWM",
+    "title": "Spirit of the Grove ends",
+    "start": "2026-11-11",
+    "end": "2026-11-14",
+    "desc": "Confirmed in-game Nov 11 06:07 Manila: 2d 22h left, so it ends about 4-5 AM Nov 14 (last active day Nov 13). Start date unknown, bar starts today.",
     "type": "event"
   }
 ]
