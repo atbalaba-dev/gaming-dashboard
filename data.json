@@ -9,42 +9,6 @@
     "type": "cycle"
   },
   {
-    "id": "w16-202610",
-    "game": "WWM",
-    "title": "Qingzhou Opening Month ends",
-    "start": "2026-10-15",
-    "end": "2026-11-14",
-    "desc": "Confirmed in-game Oct 20 22:10 Manila: 24d 6h left, so it ends around 4-5 AM Nov 14 (last active day Nov 13).",
-    "type": "event"
-  },
-  {
-    "id": "w17-202610",
-    "game": "WWM",
-    "title": "Exam Showdown ends",
-    "start": "2026-10-15",
-    "end": "2026-11-14",
-    "desc": "Confirmed in-game Oct 20 22:10 Manila: 24d 6h left, so it ends around 4-5 AM Nov 14 (last active day Nov 13).",
-    "type": "event"
-  },
-  {
-    "id": "w19-202610",
-    "game": "WWM",
-    "title": "Bubble Party ends",
-    "start": "2026-10-22",
-    "end": "2026-11-14",
-    "desc": "Confirmed in-game Oct 26 06:47 Manila: 18d 22h left, ends about 5-6 AM Nov 14 (last active day Nov 13).",
-    "type": "event"
-  },
-  {
-    "id": "w20-202610",
-    "game": "WWM",
-    "title": "Merchant's Way ends",
-    "start": "2026-10-22",
-    "end": "2026-11-14",
-    "desc": "Confirmed in-game Oct 26 06:47 Manila: 18d 22h left, ends about 5-6 AM Nov 14 (last active day Nov 13).",
-    "type": "event"
-  },
-  {
     "id": "o3-202610",
     "game": "Outlast",
     "title": "Escape the Facility ends",
@@ -60,15 +24,6 @@
     "start": "2026-11-04",
     "end": "2026-12-16",
     "desc": "7.2 main event, x920 reward icon. Genshin-builds timeline: ends Dec 16 5:59 AM Manila, so the last active day is Dec 15.",
-    "type": "event"
-  },
-  {
-    "id": "g23-202611",
-    "game": "Genshin",
-    "title": "Keep Up With Mitya! ends",
-    "start": "2026-11-04",
-    "end": "2026-11-13",
-    "desc": "Community event. From the official 7.2 event calendar (dates in Manila time).",
     "type": "event"
   },
   {
@@ -225,15 +180,6 @@
     "type": "cycle"
   },
   {
-    "id": "d6-202611",
-    "game": "DBD",
-    "title": "Lights Out: Stranger Things Edition ends (verify time)",
-    "start": "2026-11-05",
-    "end": "2026-11-13",
-    "desc": "Modifier event, Nov 5 to Nov 12 per dbdvault. DBD times are ET, so the end may land early Nov 13 Manila. Check the in-game timer.",
-    "type": "event"
-  },
-  {
     "id": "p3-202611",
     "game": "Pokopia",
     "title": "Apples to Applin ends",
@@ -252,12 +198,21 @@
     "type": "event"
   },
   {
-    "id": "w21-202611",
+    "id": "w22-202611",
     "game": "WWM",
-    "title": "Spirit of the Grove ends",
-    "start": "2026-11-11",
-    "end": "2026-11-14",
-    "desc": "Confirmed in-game Nov 11 06:07 Manila: 2d 22h left, so it ends about 4-5 AM Nov 14 (last active day Nov 13). Start date unknown, bar starts today.",
+    "title": "Arena Season 5: Ever Aflame ends (verify)",
+    "start": "2026-11-14",
+    "end": "2026-11-26",
+    "desc": "Conflicting sources: wherewindsmeetgame.org says Arena Season 5 ends Nov 26 04:59:59 (UTC+8), another article said Jan 7 2027. Read the Season timer in-game. Start date unknown. No calendar reminder until confirmed.",
+    "type": "event"
+  },
+  {
+    "id": "d7-202610",
+    "game": "DBD",
+    "title": "Rift Academia closes (verify time)",
+    "start": "2026-10-06",
+    "end": "2027-01-27",
+    "desc": "Rift Pass runs Oct 6 2026 to Jan 26 2027 per dbdvault. Reminder only, tiers are lost after close. Check the in-game timer.",
     "type": "event"
   }
 ]
